@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F429FD85-0ED6-4C99-828A-DCC998CFEA56}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>XTest</RootNamespace>
+    <AssemblyName>XTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CyclicCode\AbramsonaCode\FormAbramsTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CyclicCode\AbramsonaCode\FormAbramsTest1.Designer.cs">
+      <DependentUpon>FormAbramsTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CyclicCode\AbramsonaCode\FormAbramsTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CyclicCode\AbramsonaCode\FormAbramsTest6.Designer.cs">
+      <DependentUpon>FormAbramsTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CyclicCode\BChHCode\FormBChHTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CyclicCode\BChHCode\FormBChHTest1.Designer.cs">
+      <DependentUpon>FormBChHTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CyclicCode\BChHCode\FormBChHTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CyclicCode\BChHCode\FormBChHTest6.Designer.cs">
+      <DependentUpon>FormBChHTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CyclicCode\FairaCode\FormFairaTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CyclicCode\FairaCode\FormFairaTest1.Designer.cs">
+      <DependentUpon>FormFairaTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CyclicCode\FairaCode\FormFairaTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CyclicCode\FairaCode\FormFairaTest6.Designer.cs">
+      <DependentUpon>FormFairaTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CyclicCode\HemingaCode\FormHemingaTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CyclicCode\HemingaCode\FormHemingaTest1.Designer.cs">
+      <DependentUpon>FormHemingaTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CyclicCode\HemingaCode\FormHemingaTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CyclicCode\HemingaCode\FormHemingaTest6.Designer.cs">
+      <DependentUpon>FormHemingaTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\BergerCode\FormBergerTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\BergerCode\FormBergerTest1.Designer.cs">
+      <DependentUpon>FormBergerTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\BergerCode\FormBergerTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\BergerCode\FormBergerTest6.Designer.cs">
+      <DependentUpon>FormBergerTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\DDC\FormDDCTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\DDC\FormDDCTest1.Designer.cs">
+      <DependentUpon>FormDDCTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\DDC\FormDDCTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\DDC\FormDDCTest6.Designer.cs">
+      <DependentUpon>FormDDCTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\Entropy\FormEntropyTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\Entropy\FormEntropyTest1.Designer.cs">
+      <DependentUpon>FormEntropyTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\Entropy\FormEntropyTest4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\Entropy\FormEntropyTest4.Designer.cs">
+      <DependentUpon>FormEntropyTest4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\Entropy\FormEntropyTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\Entropy\FormEntropyTest6.Designer.cs">
+      <DependentUpon>FormEntropyTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\GrayCode\FormGrayTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\GrayCode\FormGrayTest1.Designer.cs">
+      <DependentUpon>FormGrayTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\GrayCode\FormGrayTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\GrayCode\FormGrayTest6.Designer.cs">
+      <DependentUpon>FormGrayTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\HaffmenaCode\FormHaffmenaTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\HaffmenaCode\FormHaffmenaTest1.Designer.cs">
+      <DependentUpon>FormHaffmenaTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\RekyrentCode\FormRekyrentTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\RekyrentCode\FormRekyrentTest1.Designer.cs">
+      <DependentUpon>FormRekyrentTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\RekyrentCode\FormRekyrentTest4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\RekyrentCode\FormRekyrentTest4.Designer.cs">
+      <DependentUpon>FormRekyrentTest4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\SateliteCode\FormSateliteTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\SateliteCode\FormSateliteTest1.Designer.cs">
+      <DependentUpon>FormSateliteTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\SateliteCode\FormSateliteTest4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\SateliteCode\FormSateliteTest4.Designer.cs">
+      <DependentUpon>FormSateliteTest4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest1.Designer.cs">
+      <DependentUpon>FormShenona-FanoTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest3.Designer.cs">
+      <DependentUpon>FormShenona-FanoTest3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Non-binaryCode\CodeWithaSimpleIteration\FormIterationTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Non-binaryCode\CodeWithaSimpleIteration\FormIterationTest1.Designer.cs">
+      <DependentUpon>FormIterationTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Non-binaryCode\CodeWithaSimpleIteration\FormIterationTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Non-binaryCode\CodeWithaSimpleIteration\FormIterationTest6.Designer.cs">
+      <DependentUpon>FormIterationTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Non-binaryCode\CodeWithModuleTest\FormModuleTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Non-binaryCode\CodeWithModuleTest\FormModuleTest6.Designer.cs">
+      <DependentUpon>FormModuleTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Non-binaryCode\CodeWithModuleTest\FormModuleTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Non-binaryCode\CodeWithModuleTest\FormModuleTest1.Designer.cs">
+      <DependentUpon>FormModuleTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Non-binaryCode\IterativityCode\FormIterativityTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Non-binaryCode\IterativityCode\FormIterativityTest1.Designer.cs">
+      <DependentUpon>FormIterativityTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Non-binaryCode\IterativityCode\FormIterativityTest5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Non-binaryCode\IterativityCode\FormIterativityTest5.Designer.cs">
+      <DependentUpon>FormIterativityTest5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest1.Designer.cs">
+      <DependentUpon>FormElaesaTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest2.Designer.cs">
+      <DependentUpon>FormElaesaTest2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest3.Designer.cs">
+      <DependentUpon>FormElaesaTest3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest4.Designer.cs">
+      <DependentUpon>FormElaesaTest4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest5.Designer.cs">
+      <DependentUpon>FormElaesaTest5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest6.Designer.cs">
+      <DependentUpon>FormElaesaTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest7.Designer.cs">
+      <DependentUpon>FormElaesaTest7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest8.Designer.cs">
+      <DependentUpon>FormElaesaTest8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest1.Designer.cs">
+      <DependentUpon>FormHemingaTest1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest10.Designer.cs">
+      <DependentUpon>FormHemingaTest10.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest2.Designer.cs">
+      <DependentUpon>FormHemingaTest2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest3.Designer.cs">
+      <DependentUpon>FormHemingaTest3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest4.Designer.cs">
+      <DependentUpon>FormHemingaTest4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest5.Designer.cs">
+      <DependentUpon>FormHemingaTest5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest6.Designer.cs">
+      <DependentUpon>FormHemingaTest6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest7.Designer.cs">
+      <DependentUpon>FormHemingaTest7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest8.Designer.cs">
+      <DependentUpon>FormHemingaTest8.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest9.Designer.cs">
+      <DependentUpon>FormHemingaTest9.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CyclicCode\AbramsonaCode\FormAbramsTest1.resx">
+      <DependentUpon>FormAbramsTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CyclicCode\AbramsonaCode\FormAbramsTest6.resx">
+      <DependentUpon>FormAbramsTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CyclicCode\BChHCode\FormBChHTest1.resx">
+      <DependentUpon>FormBChHTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CyclicCode\BChHCode\FormBChHTest6.resx">
+      <DependentUpon>FormBChHTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CyclicCode\FairaCode\FormFairaTest1.resx">
+      <DependentUpon>FormFairaTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CyclicCode\FairaCode\FormFairaTest6.resx">
+      <DependentUpon>FormFairaTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CyclicCode\HemingaCode\FormHemingaTest1.resx">
+      <DependentUpon>FormHemingaTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CyclicCode\HemingaCode\FormHemingaTest6.resx">
+      <DependentUpon>FormHemingaTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\BergerCode\FormBergerTest1.resx">
+      <DependentUpon>FormBergerTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\BergerCode\FormBergerTest6.resx">
+      <DependentUpon>FormBergerTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\DDC\FormDDCTest1.resx">
+      <DependentUpon>FormDDCTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\DDC\FormDDCTest6.resx">
+      <DependentUpon>FormDDCTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\Entropy\FormEntropyTest1.resx">
+      <DependentUpon>FormEntropyTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\Entropy\FormEntropyTest4.resx">
+      <DependentUpon>FormEntropyTest4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\Entropy\FormEntropyTest6.resx">
+      <DependentUpon>FormEntropyTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\GrayCode\FormGrayTest1.resx">
+      <DependentUpon>FormGrayTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\GrayCode\FormGrayTest6.resx">
+      <DependentUpon>FormGrayTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\HaffmenaCode\FormHaffmenaTest1.resx">
+      <DependentUpon>FormHaffmenaTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\RekyrentCode\FormRekyrentTest1.resx">
+      <DependentUpon>FormRekyrentTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\RekyrentCode\FormRekyrentTest4.resx">
+      <DependentUpon>FormRekyrentTest4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\SateliteCode\FormSateliteTest1.resx">
+      <DependentUpon>FormSateliteTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\SateliteCode\FormSateliteTest4.resx">
+      <DependentUpon>FormSateliteTest4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest1.resx">
+      <DependentUpon>FormShenona-FanoTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest3.resx">
+      <DependentUpon>FormShenona-FanoTest3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Non-binaryCode\CodeWithaSimpleIteration\FormIterationTest1.resx">
+      <DependentUpon>FormIterationTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Non-binaryCode\CodeWithaSimpleIteration\FormIterationTest6.resx">
+      <DependentUpon>FormIterationTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Non-binaryCode\CodeWithModuleTest\FormModuleTest1.resx">
+      <DependentUpon>FormModuleTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Non-binaryCode\CodeWithModuleTest\FormModuleTest6.resx">
+      <DependentUpon>FormModuleTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Non-binaryCode\IterativityCode\FormIterativityTest1.resx">
+      <DependentUpon>FormIterativityTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Non-binaryCode\IterativityCode\FormIterativityTest5.resx">
+      <DependentUpon>FormIterativityTest5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest1.resx">
+      <DependentUpon>FormElaesaTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest2.resx">
+      <DependentUpon>FormElaesaTest2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest3.resx">
+      <DependentUpon>FormElaesaTest3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest4.resx">
+      <DependentUpon>FormElaesaTest4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest5.resx">
+      <DependentUpon>FormElaesaTest5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest6.resx">
+      <DependentUpon>FormElaesaTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest7.resx">
+      <DependentUpon>FormElaesaTest7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest8.resx">
+      <DependentUpon>FormElaesaTest8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest1.resx">
+      <DependentUpon>FormHemingaTest1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest10.resx">
+      <DependentUpon>FormHemingaTest10.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest2.resx">
+      <DependentUpon>FormHemingaTest2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest3.resx">
+      <DependentUpon>FormHemingaTest3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest4.resx">
+      <DependentUpon>FormHemingaTest4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest5.resx">
+      <DependentUpon>FormHemingaTest5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest6.resx">
+      <DependentUpon>FormHemingaTest6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest7.resx">
+      <DependentUpon>FormHemingaTest7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest8.resx">
+      <DependentUpon>FormHemingaTest8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest9.resx">
+      <DependentUpon>FormHemingaTest9.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ElseCodeAndLabs\CanalCode\" />
+    <Folder Include="Non-binaryCode\PrimaryNon-binaryCode\" />
+    <Folder Include="Resources\" />
+    <Folder Include="SystematicCode\Rida-MilleraCode\" />
+    <Folder Include="SystematicCode\VarshamovaCode\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
