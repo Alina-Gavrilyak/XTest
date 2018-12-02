@@ -7,18 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Components;
+using MetroFramework.Forms;
 
 namespace XTest
 {
-    public partial class MainForm : Form
+    public partial class MainForm : MetroForm
     {
-
+        
 
         public MainForm()
         {
             InitializeComponent();
-            ButtonTest.Enabled = false;
-            ButtonTraining.Enabled = false;
+            //ButtonTest.Enabled = false;
+            //ButtonTraining.Enabled = false;
 
             #region Дерево
             TreeNode a = TreeOfMethods.Nodes.Add("Теория информации и кодирования");
@@ -59,27 +61,56 @@ namespace XTest
         {
 
         }
-        private void ButtonTрeory_Click(object sender, EventArgs e)
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            this.Theme = MetroFramework.MetroThemeStyle.Dark;
+            ButtonTraining.Theme = MetroFramework.MetroThemeStyle.Dark;
+            ButtonReport.Theme = MetroFramework.MetroThemeStyle.Dark;
+            ButtonTest.Theme = MetroFramework.MetroThemeStyle.Dark;
+            ButtonTheory.Theme = MetroFramework.MetroThemeStyle.Dark;
+            TreeOfMethods.BackColor = Color.FromArgb(34, 34, 34);
+            TreeOfMethods.ForeColor = Color.White;
+            Settings.Theme = MyTheme.Black;
+        }
+
+        private void btn_White_Click(object sender, EventArgs e)
+        {
+            this.Theme = MetroFramework.MetroThemeStyle.Light;
+            ButtonTraining.Theme = MetroFramework.MetroThemeStyle.Light;
+            ButtonReport.Theme = MetroFramework.MetroThemeStyle.Light;
+            ButtonTest.Theme = MetroFramework.MetroThemeStyle.Light;
+            ButtonTheory.Theme = MetroFramework.MetroThemeStyle.Light;
+            TreeOfMethods.BackColor = Color.White;
+            TreeOfMethods.ForeColor = Color.Black;
+            Settings.Theme = MyTheme.White;
+        }
+
+        private void ButtonTraining_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ButtonTheory_Click(object sender, EventArgs e)
         {
             SystematicCode.ElaesaCode.FormElaesaTest1 form2 = new SystematicCode.ElaesaCode.FormElaesaTest1();
 
             form2.Show();
         }
 
-        private void ButtonTraining_Click(object sender, EventArgs e)
+        private void ButtonReport_Click_1(object sender, EventArgs e)
         {
 
         }
 
-        private void ButtonReport_Click(object sender, EventArgs e)
+        private void ButtonTest_Click_1(object sender, EventArgs e)
         {
 
         }
-
-        private void ButtonTest_Click(object sender, EventArgs e)
-        {
-
-        }
- 
     }
 }

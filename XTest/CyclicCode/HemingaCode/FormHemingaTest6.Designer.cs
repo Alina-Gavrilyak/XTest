@@ -39,67 +39,76 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 92);
+            this.label4.Location = new System.Drawing.Point(22, 143);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(374, 17);
+            this.label4.Size = new System.Drawing.Size(286, 13);
             this.label4.TabIndex = 22;
             this.label4.Text = "Образующий полином для кода с dmin = 3 равен 10111";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(282, 393);
+            this.button1.Location = new System.Drawing.Point(231, 307);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 45);
+            this.button1.Size = new System.Drawing.Size(77, 37);
             this.button1.TabIndex = 21;
             this.button1.Text = "Далее";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 169);
+            this.textBox1.Location = new System.Drawing.Point(25, 218);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(235, 22);
+            this.textBox1.Size = new System.Drawing.Size(283, 20);
             this.textBox1.TabIndex = 20;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(15, 138);
+            this.label3.Location = new System.Drawing.Point(22, 186);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(247, 17);
+            this.label3.Size = new System.Drawing.Size(191, 13);
             this.label3.TabIndex = 19;
             this.label3.Text = "Восстановите исходное сообщение:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 41);
+            this.label2.Location = new System.Drawing.Point(31, 107);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 17);
+            this.label2.Size = new System.Drawing.Size(97, 13);
             this.label2.TabIndex = 18;
             this.label2.Text = "100111110111100";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(22, 70);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 17);
+            this.label1.Size = new System.Drawing.Size(203, 13);
             this.label1.TabIndex = 17;
             this.label1.Text = "Принятая комбинация (код с dmin = 4):";
             // 
             // FormHemingaTest6
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(397, 450);
+            this.ClientSize = new System.Drawing.Size(335, 366);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormHemingaTest6";
+            this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "Декодирование";
             this.ResumeLayout(false);
             this.PerformLayout();
