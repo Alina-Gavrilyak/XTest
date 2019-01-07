@@ -287,12 +287,6 @@
     <Compile Include="SystematicCode\HemingaCode\FormHemingaTest1.Designer.cs">
       <DependentUpon>FormHemingaTest1.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest10.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SystematicCode\HemingaCode\FormHemingaTest10.Designer.cs">
-      <DependentUpon>FormHemingaTest10.cs</DependentUpon>
-    </Compile>
     <Compile Include="SystematicCode\Rida-MilleraCode\FormRida-MilleraTest1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,9 +435,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest1.resx">
       <DependentUpon>FormHemingaTest1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest10.resx">
-      <DependentUpon>FormHemingaTest10.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SystematicCode\Rida-MilleraCode\FormRida-MilleraTest1.resx">
       <DependentUpon>FormRida-MilleraTest1.cs</DependentUpon>
