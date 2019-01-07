@@ -225,7 +225,8 @@ namespace XTest
             }
             else if (formName.Equals("Двоично-десятичный код"))
             {
-
+                FormDDCTest1 form = new FormDDCTest1(isTest, codec);
+                form.Show();
             }
             else if (formName.Equals("Код Бергера"))
             {

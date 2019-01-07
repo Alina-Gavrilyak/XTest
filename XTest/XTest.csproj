@@ -107,17 +107,12 @@
     <Compile Include="ElseCodeAndLabs\BergerCode\FormBergerTest6.Designer.cs">
       <DependentUpon>FormBergerTest6.cs</DependentUpon>
     </Compile>
+    <Compile Include="ElseCodeAndLabs\DDC\DDCData.cs" />
     <Compile Include="ElseCodeAndLabs\DDC\FormDDCTest1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElseCodeAndLabs\DDC\FormDDCTest1.Designer.cs">
       <DependentUpon>FormDDCTest1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ElseCodeAndLabs\DDC\FormDDCTest6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ElseCodeAndLabs\DDC\FormDDCTest6.Designer.cs">
-      <DependentUpon>FormDDCTest6.cs</DependentUpon>
     </Compile>
     <Compile Include="ElseCodeAndLabs\Entropy\FormEntropyTest1.cs">
       <SubType>Form</SubType>
@@ -333,9 +328,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElseCodeAndLabs\DDC\FormDDCTest1.resx">
       <DependentUpon>FormDDCTest1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ElseCodeAndLabs\DDC\FormDDCTest6.resx">
-      <DependentUpon>FormDDCTest6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElseCodeAndLabs\Entropy\FormEntropyTest1.resx">
       <DependentUpon>FormEntropyTest1.cs</DependentUpon>
