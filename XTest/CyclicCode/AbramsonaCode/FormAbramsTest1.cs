@@ -141,7 +141,7 @@ namespace XTest.CyclicCode.AbramsonaCode
                 else
                 {
                     int mark = countCorrectAnswer * 5 / countPassedQuestion;
-                    ResultForm form = new ResultForm(mark, "Систематический код Хемминга", countCorrectAnswer, countPassedQuestion);
+                    ResultForm form = new ResultForm(mark, this.Text, countCorrectAnswer, countPassedQuestion);
                     form.Show();
                     countPassedQuestion = 0;
                     countCorrectAnswer = 0;

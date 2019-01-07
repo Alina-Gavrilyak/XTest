@@ -208,7 +208,7 @@ namespace XTest
             }
             else if (formName.Equals("Код с простым повторением"))
             {
-                Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1 form = new Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1();
+                Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1 form = new Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1(isTest, codec);
                 form.Show();
             }
             else if (formName.Equals("Итеративный код"))

@@ -216,6 +216,7 @@
     <Compile Include="Non-binaryCode\CodeWithaSimpleIteration\FormIterationTest6.Designer.cs">
       <DependentUpon>FormIterationTest6.cs</DependentUpon>
     </Compile>
+    <Compile Include="Non-binaryCode\CodeWithaSimpleIteration\IterationData.cs" />
     <Compile Include="Non-binaryCode\CodeWithModuleTest\FormModuleTest6.cs">
       <SubType>Form</SubType>
     </Compile>
