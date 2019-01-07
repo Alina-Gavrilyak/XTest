@@ -236,6 +236,7 @@
     <Compile Include="Non-binaryCode\IterativityCode\FormIterativityTest5.Designer.cs">
       <DependentUpon>FormIterativityTest5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Non-binaryCode\PrimaryNon-binaryCode\PrimaryNonBinaryData.cs" />
     <Compile Include="Non-binaryCode\PrimaryNon-binaryCode\FormPrimaryNon-binaryTest1.cs">
       <SubType>Form</SubType>
     </Compile>
