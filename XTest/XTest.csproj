@@ -205,6 +205,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\IData.cs" />
     <Compile Include="Non-binaryCode\CodeWithaSimpleIteration\FormIterationTest1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -274,24 +275,6 @@
     <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest5.Designer.cs">
       <DependentUpon>FormElaesaTest5.cs</DependentUpon>
     </Compile>
-    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest6.Designer.cs">
-      <DependentUpon>FormElaesaTest6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest7.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest7.Designer.cs">
-      <DependentUpon>FormElaesaTest7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest8.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest8.Designer.cs">
-      <DependentUpon>FormElaesaTest8.cs</DependentUpon>
-    </Compile>
     <Compile Include="SystematicCode\HemingaCode\FormHemingaTest1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -352,6 +335,7 @@
     <Compile Include="SystematicCode\HemingaCode\FormHemingaTest9.Designer.cs">
       <DependentUpon>FormHemingaTest9.cs</DependentUpon>
     </Compile>
+    <Compile Include="SystematicCode\HemingaCode\HemingaData.cs" />
     <EmbeddedResource Include="CyclicCode\AbramsonaCode\FormAbramsTest1.resx">
       <DependentUpon>FormAbramsTest1.cs</DependentUpon>
     </EmbeddedResource>
@@ -469,15 +453,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest5.resx">
       <DependentUpon>FormElaesaTest5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest6.resx">
-      <DependentUpon>FormElaesaTest6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest7.resx">
-      <DependentUpon>FormElaesaTest7.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SystematicCode\ElaesaCode\FormElaesaTest8.resx">
-      <DependentUpon>FormElaesaTest8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SystematicCode\HemingaCode\FormHemingaTest1.resx">
       <DependentUpon>FormHemingaTest1.cs</DependentUpon>
