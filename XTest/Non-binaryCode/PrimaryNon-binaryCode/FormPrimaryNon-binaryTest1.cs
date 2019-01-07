@@ -19,7 +19,7 @@ namespace XTest.Non_binaryCode.PrimaryNon_binaryCode
         private string correctAnswer;
         private static int countPassedQuestion;
         private static int countCorrectAnswer;
-        private static int maxCount = 10;
+        private static int maxCount = 5;
 
         private bool _isTest;
 
@@ -50,7 +50,8 @@ namespace XTest.Non_binaryCode.PrimaryNon_binaryCode
             }
             else
             {
-                int skipNumber = r.Next(15, 25);
+                //19 is upsent
+                int skipNumber = r.Next(15, 24);
                 item = data.CodecData.Skip(skipNumber).First();
             }
 
@@ -126,8 +127,7 @@ namespace XTest.Non_binaryCode.PrimaryNon_binaryCode
                 }
                 else
                 {
-                    int mark = countCorrectAnswer * 5 / countPassedQuestion;
-                    ResultForm form = new ResultForm(mark, this.Text, countCorrectAnswer, countPassedQuestion);
+                    FormPrimaryNon_binaryTest2 form = new FormPrimaryNon_binaryTest2(true, countCorrectAnswer);
                     form.Show();
                     countPassedQuestion = 0;
                     countCorrectAnswer = 0;

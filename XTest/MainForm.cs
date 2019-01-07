@@ -155,9 +155,7 @@ namespace XTest
 
                 SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1(isTest, codec);
                 form.Show();
-
             }
-
             // cyclic codes
             else if (formName.Equals("Коды Абрамсона"))
             {
@@ -184,9 +182,16 @@ namespace XTest
             //non binary codes
             else if (formName.Equals("Первичные недвоичные коды"))
             {
-                //if()
-                //Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest1 form = new Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest1(true);
-                //form.Show();
+                if (codec)
+                {
+                    Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest1 form = new Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+                    Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest2 form = new Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest2(isTest);
+                    form.Show();
+                }
             }
             else if (formName.Equals("Код с проверкой по модулю q"))
             {
