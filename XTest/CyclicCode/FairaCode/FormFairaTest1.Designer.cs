@@ -29,13 +29,17 @@
         private void InitializeComponent()
         {
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.result = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.label5 = new System.Windows.Forms.Label();
+            this.ShowAnswer = new System.Windows.Forms.Button();
+            this.Check = new System.Windows.Forms.Button();
+            this.BtnNext = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.CheckingResultLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label4
@@ -48,24 +52,13 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Неприводимый полином";
             // 
-            // button1
+            // result
             // 
-            this.button1.Location = new System.Drawing.Point(158, 307);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 37);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Далее";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(34, 248);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 20);
-            this.textBox1.TabIndex = 14;
+            this.result.Location = new System.Drawing.Point(34, 248);
+            this.result.Margin = new System.Windows.Forms.Padding(2);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(201, 20);
+            this.result.TabIndex = 14;
             // 
             // label3
             // 
@@ -112,20 +105,73 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(168, 174);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(44, 13);
+            this.label5.Size = new System.Drawing.Size(23, 13);
             this.label5.TabIndex = 41;
-            this.label5.Text = "P1: 101";
+            this.label5.Text = "P1:";
+            // 
+            // ShowAnswer
+            // 
+            this.ShowAnswer.Location = new System.Drawing.Point(21, 306);
+            this.ShowAnswer.Margin = new System.Windows.Forms.Padding(2);
+            this.ShowAnswer.Name = "ShowAnswer";
+            this.ShowAnswer.Size = new System.Drawing.Size(76, 37);
+            this.ShowAnswer.TabIndex = 44;
+            this.ShowAnswer.Text = "Ответ";
+            this.ShowAnswer.UseVisualStyleBackColor = true;
+            // 
+            // Check
+            // 
+            this.Check.Location = new System.Drawing.Point(101, 307);
+            this.Check.Margin = new System.Windows.Forms.Padding(2);
+            this.Check.Name = "Check";
+            this.Check.Size = new System.Drawing.Size(76, 37);
+            this.Check.TabIndex = 43;
+            this.Check.Text = "Проверка";
+            this.Check.UseVisualStyleBackColor = true;
+            // 
+            // BtnNext
+            // 
+            this.BtnNext.Location = new System.Drawing.Point(182, 307);
+            this.BtnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnNext.Name = "BtnNext";
+            this.BtnNext.Size = new System.Drawing.Size(77, 37);
+            this.BtnNext.TabIndex = 42;
+            this.BtnNext.Text = "Далее";
+            this.BtnNext.UseVisualStyleBackColor = true;
+            this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(188, 174);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(25, 13);
+            this.label6.TabIndex = 45;
+            this.label6.Text = "101";
+            // 
+            // CheckingResultLabel
+            // 
+            this.CheckingResultLabel.AutoSize = true;
+            this.CheckingResultLabel.Location = new System.Drawing.Point(31, 279);
+            this.CheckingResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.CheckingResultLabel.Name = "CheckingResultLabel";
+            this.CheckingResultLabel.Size = new System.Drawing.Size(0, 13);
+            this.CheckingResultLabel.TabIndex = 46;
             // 
             // FormFairaTest1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(271, 366);
+            this.Controls.Add(this.CheckingResultLabel);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.ShowAnswer);
+            this.Controls.Add(this.Check);
+            this.Controls.Add(this.BtnNext);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.result);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -142,12 +188,16 @@
         #endregion
 
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox result;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button ShowAnswer;
+        private System.Windows.Forms.Button Check;
+        private System.Windows.Forms.Button BtnNext;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label CheckingResultLabel;
     }
 }
