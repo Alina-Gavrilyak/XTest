@@ -28,7 +28,7 @@ namespace XTest
             InitializeComponent();
             //ButtonTest.Enabled = false;
             //ButtonTraining.Enabled = false;
-            
+
 
             #region Дерево
             a = TreeOfMethods.Nodes.Add("Теория информации и кодирования");
@@ -39,13 +39,13 @@ namespace XTest
             q.Nodes.Add("Код Элайеса").Tag = 11;
             q.Nodes.Add("Код Варшамова").Tag = 12;
             q.Nodes.Add("Коды Рида-Милеера").Tag = 13;
-            q.Nodes.Add("Код Хеминга").Tag = 14;
+            q.Nodes.Add("Код Хеминга 1").Tag = 14;
 
             w = a.Nodes.Add("Циклические коды");
             w.Tag = 20;
             w.Nodes.Add("Коды Абрамсона").Tag = 21;
             w.Nodes.Add("Коды Файра").Tag = 22;
-            w.Nodes.Add("Код Хеминга").Tag = 23;
+            w.Nodes.Add("Код Хеминга 2").Tag = 23;
             w.Nodes.Add("Код БЧХ").Tag = 24;
 
             t = a.Nodes.Add("Недвоичные коды");
@@ -77,7 +77,7 @@ namespace XTest
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btn_Dark_Click(object sender, EventArgs e)
@@ -106,303 +106,160 @@ namespace XTest
 
         private void ButtonTraining_Click_1(object sender, EventArgs e)
         {
-            findForm(a);
+            FindForm(a, false);
         }
 
-        private void findForm(TreeNode parentNode)
+        private void FindForm(TreeNode parentNode, bool isTest)
         {
             if (parentNode.IsSelected)
             {
                 selectedNode = parentNode;
-                openForm(parentNode.Text);
+                OpenForm(parentNode.Text, isTest);
             }
             else
             {
                 foreach (TreeNode subNode in parentNode.Nodes)
                 {
-                    findForm(subNode);
+                    FindForm(subNode, isTest);
                 }
             }
         }
 
-        private void openForm(string formName)
+        private void OpenForm(string formName, bool isTest)
         {
-            //Random random = new Random();
-            //int rand = random.Next(1, 2);
-            //// systematic codes
-            //if (formName.Equals("Код Элайеса"))
-            //{
-            //    if(rand == 1)
-            //    {
-            //        SystematicCode.ElaesaCode.FormElaesaTest1 form = new SystematicCode.ElaesaCode.FormElaesaTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //        SystematicCode.ElaesaCode.FormElaesaTest2 form = new SystematicCode.ElaesaCode.FormElaesaTest2();
-            //        form.Show();
-            //    }
-            //    //if (rand == 3)
-            //    //{
-            //    //    SystematicCode.ElaesaCode.FormElaesaTest3 form = new SystematicCode.ElaesaCode.FormElaesaTest3();
-            //    //    form.Show();
-            //    //}
-            //    //if (rand == 4)
-            //    //{
-            //      //  SystematicCode.ElaesaCode.FormElaesaTest4 form = new SystematicCode.ElaesaCode.FormElaesaTest4();
-            //       // form.Show();
-            //    //}
-            //    //if (rand == 5)
-            //    //{
-            //     //   SystematicCode.ElaesaCode.FormElaesaTest5 form = new SystematicCode.ElaesaCode.FormElaesaTest5();
-            //       // form.Show();
-            //    //}
-              
-            //}
-            //else if(formName.Equals("Код Варшамова"))
-            //{
+            if (formName.Equals("Код Элайеса"))
+            {
+                SystematicCode.ElaesaCode.FormElaesaTest1 form = new SystematicCode.ElaesaCode.FormElaesaTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Код Варшамова"))
+            {
 
-            //}
-            //else if (formName.Equals("Коды Рида-Милеера"))
-            //{
+            }
+            else if (formName.Equals("Коды Рида-Милеера"))
+            {
 
-            //}
-            //else if (formName.Equals("Код Хеминга"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //        SystematicCode.HemingaCode.FormHemingaTest2 form = new SystematicCode.HemingaCode.FormHemingaTest2();
-            //        form.Show();
-            //    }
-            //    if (rand == 3)
-            //    {
-            //        SystematicCode.HemingaCode.FormHemingaTest3 form = new SystematicCode.HemingaCode.FormHemingaTest3();
-            //        form.Show();
-            //    }
-            //    if (rand == 4)
-            //    {
-            //        SystematicCode.HemingaCode.FormHemingaTest4 form = new SystematicCode.HemingaCode.FormHemingaTest4();
-            //        form.Show();
-            //    }
-            //    if (rand == 5)
-            //    {
-            //        SystematicCode.HemingaCode.FormHemingaTest5 form = new SystematicCode.HemingaCode.FormHemingaTest5();
-            //        form.Show();
-            //    }
-            //    if (rand == 6)
-            //    {
-            //        SystematicCode.HemingaCode.FormHemingaTest6 form = new SystematicCode.HemingaCode.FormHemingaTest6();
-            //        form.Show();
-            //    }
-            //}
+            }
+            else if (formName.Equals("Код Хеминга 1"))
+            {
+                if (isTest)
+                {
+                    SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1(true);
+                    form.Show();
+                }
+                else
+                {
+                    MenuItem[] menuItems = new MenuItem[]{
+                            new MenuItem("Кодирование", btnCodecMenuItems),
+                            new MenuItem("Декодирование", btnCodecMenuItems)
+                        };
 
-            //// cyclic codes
-            //else if (formName.Equals("Код Абрамса"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        CyclicCode.AbramsonaCode.FormAbramsTest1 form = new CyclicCode.AbramsonaCode.FormAbramsTest1();
-            //        form.Show();
-            //    }
-                
-            //    if (rand == 2)
-            //    {
-            //        CyclicCode.AbramsonaCode.FormAbramsTest6 form = new CyclicCode.AbramsonaCode.FormAbramsTest6();
-            //        form.Show();
-            //    }
-            //}
-            //else if (formName.Equals("Код Файра"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        CyclicCode.FairaCode.FormFairaTest1 form = new CyclicCode.FairaCode.FormFairaTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2) { 
-            //        CyclicCode.FairaCode.FormFairaTest6 form = new CyclicCode.FairaCode.FormFairaTest6();
-            //        form.Show();
-            //    }
-            //}
-            //else if (formName.Equals("Код Хеминга"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        CyclicCode.HemingaCode.FormHemingaTest1 form = new CyclicCode.HemingaCode.FormHemingaTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-                   
-            //        CyclicCode.HemingaCode.FormHemingaTest6 form = new CyclicCode.HemingaCode.FormHemingaTest6();
-            //        form.Show();
-            //    }
-            //}
-            //else if (formName.Equals("Код БЧХ"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        CyclicCode.BChHCode.FormBChHTest1 form = new CyclicCode.BChHCode.FormBChHTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //        CyclicCode.BChHCode.FormBChHTest6 form = new CyclicCode.BChHCode.FormBChHTest6();
-            //        form.Show();
-            //    }
-            //}
+                    ContextMenu buttonMenu = new ContextMenu(menuItems);
+                    buttonMenu.Show(ButtonTraining, new System.Drawing.Point(20, 20));
+                }
+            }
 
-            ////non binary codes
-            //else if (formName.Equals("Первичные недвоичные коды"))
-            //{
-                
-            //}
-            //else if (formName.Equals("Код с проверкой по модулю q"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        Non_binaryCode.CodeWithModuleTest.FormModuleTest1 form = new Non_binaryCode.CodeWithModuleTest.FormModuleTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //        Non_binaryCode.CodeWithModuleTest.FormModuleTest6 form = new Non_binaryCode.CodeWithModuleTest.FormModuleTest6();
-            //        form.Show();
-            //    }
-            //}
-            //else if (formName.Equals("Код с простым повторением"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1 form = new Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //        Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest6 form = new Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest6();
-            //        form.Show();
-            //    }
-            //}
-            //else if (formName.Equals("Итеративный код"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        Non_binaryCode.IterativityCode.FormIterativityTest5 form = new Non_binaryCode.IterativityCode.FormIterativityTest5();
-            //        form.Show();
-            //    }
-                
-            //}
+            // cyclic codes
+            else if (formName.Equals("Код Абрамса"))
+            {
+                CyclicCode.AbramsonaCode.FormAbramsTest1 form = new CyclicCode.AbramsonaCode.FormAbramsTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Код Файра"))
+            {
+                CyclicCode.FairaCode.FormFairaTest1 form = new CyclicCode.FairaCode.FormFairaTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Код Хеминга 2"))
+            {
+                CyclicCode.HemingaCode.FormHemingaTest1 form = new CyclicCode.HemingaCode.FormHemingaTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Код БЧХ"))
+            {
+                CyclicCode.BChHCode.FormBChHTest1 form = new CyclicCode.BChHCode.FormBChHTest1();
+                form.Show();
+            }
 
-            ////other codes
-            //else if (formName.Equals("Код Грея"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        ElseCodeAndLabs.GrayCode.FormGrayTest1 form = new ElseCodeAndLabs.GrayCode.FormGrayTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //        ElseCodeAndLabs.GrayCode.FormGrayTest6 form = new ElseCodeAndLabs.GrayCode.FormGrayTest6();
-            //        form.Show();
-            //    }
-            //}
-            //else if (formName.Equals("Двоично-десятичный код"))
-            //{
-            //    if (rand == 1)
-            //    {
-                    
-            //    }
-            //}
-            //else if (formName.Equals("Код Бергера"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        ElseCodeAndLabs.BergerCode.FormBergerTest1 form = new ElseCodeAndLabs.BergerCode.FormBergerTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //        ElseCodeAndLabs.BergerCode.FormBergerTest6 form = new ElseCodeAndLabs.BergerCode.FormBergerTest6();
-            //        form.Show();
-            //    }
-            //}
-            //else if (formName.Equals("Код Шенона-Фано"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        ElseCodeAndLabs.Shenona_FanoCode.FormShenona_FanoTest1 form = new ElseCodeAndLabs.Shenona_FanoCode.FormShenona_FanoTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //        ElseCodeAndLabs.Shenona_FanoCode.FormShenona_FanoTest3 form = new ElseCodeAndLabs.Shenona_FanoCode.FormShenona_FanoTest3();
-            //        form.Show();
-            //    }
-            //}
-            //else if (formName.Equals("Код Хаффмена"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        ElseCodeAndLabs.HaffmenaCode.FormHaffmenaTest1 form = new ElseCodeAndLabs.HaffmenaCode.FormHaffmenaTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //    }
-            //}
-            //else if (formName.Equals("Коды-спутники"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        ElseCodeAndLabs.SateliteCode.FormSateliteTest1 form = new ElseCodeAndLabs.SateliteCode.FormSateliteTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //        ElseCodeAndLabs.SateliteCode.FormSateliteTest4 form = new ElseCodeAndLabs.SateliteCode.FormSateliteTest4();
-            //        form.Show();
-            //    }
-                
-            //}
-            //else if (formName.Equals("Количество информации и энтропия"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        ElseCodeAndLabs.Entropy.FormEntropyTest1 form = new ElseCodeAndLabs.Entropy.FormEntropyTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //        ElseCodeAndLabs.Entropy.FormEntropyTest4 form = new ElseCodeAndLabs.Entropy.FormEntropyTest4();
-            //        form.Show();
-            //    }
-               
-            //}
-            //else if (formName.Equals("Рекурентный код"))
-            //{
-            //    if (rand == 1)
-            //    {
-            //        ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1 form = new ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1();
-            //        form.Show();
-            //    }
-            //    if (rand == 2)
-            //    {
-            //        ElseCodeAndLabs.RekyrentCode.FormRekyrentTest4 form = new ElseCodeAndLabs.RekyrentCode.FormRekyrentTest4();
-            //        form.Show();
-            //    }
-               
-            //}
-            //else if (formName.Equals("Канальные коды"))
-            //{
+            //non binary codes
+            else if (formName.Equals("Первичные недвоичные коды"))
+            {
 
-            //}
+            }
+            else if (formName.Equals("Код с проверкой по модулю q"))
+            {
+                Non_binaryCode.CodeWithModuleTest.FormModuleTest1 form = new Non_binaryCode.CodeWithModuleTest.FormModuleTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Код с простым повторением"))
+            {
+                Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1 form = new Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Итеративный код"))
+            {
+                Non_binaryCode.IterativityCode.FormIterativityTest5 form = new Non_binaryCode.IterativityCode.FormIterativityTest5();
+                form.Show();
+            }
+
+            //other codes
+            else if (formName.Equals("Код Грея"))
+            {
+                ElseCodeAndLabs.GrayCode.FormGrayTest1 form = new ElseCodeAndLabs.GrayCode.FormGrayTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Двоично-десятичный код"))
+            {
+
+            }
+            else if (formName.Equals("Код Бергера"))
+            {
+                ElseCodeAndLabs.BergerCode.FormBergerTest1 form = new ElseCodeAndLabs.BergerCode.FormBergerTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Код Шенона-Фано"))
+            {
+                ElseCodeAndLabs.Shenona_FanoCode.FormShenona_FanoTest1 form = new ElseCodeAndLabs.Shenona_FanoCode.FormShenona_FanoTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Код Хаффмена"))
+            {
+                ElseCodeAndLabs.HaffmenaCode.FormHaffmenaTest1 form = new ElseCodeAndLabs.HaffmenaCode.FormHaffmenaTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Коды-спутники"))
+            {
+                ElseCodeAndLabs.SateliteCode.FormSateliteTest1 form = new ElseCodeAndLabs.SateliteCode.FormSateliteTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Количество информации и энтропия"))
+            {
+                ElseCodeAndLabs.Entropy.FormEntropyTest1 form = new ElseCodeAndLabs.Entropy.FormEntropyTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Рекурентный код"))
+            {
+
+                ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1 form = new ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1();
+                form.Show();
+            }
+            else if (formName.Equals("Канальные коды"))
+            {
+
+            }
 
         }
+        private void btnCodecMenuItems(object sender, EventArgs e)
+        {
+            string n = ((MenuItem)sender).Text;
+
+            bool codec = (n == "Кодирование");
+
+            SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1(false, codec);
+            form.Show();
+
+        }
+
 
         private string getHashCode(string name, string[] answers)
         {
@@ -413,7 +270,7 @@ namespace XTest
             return revertedResult;
         }
 
-        private string arrayToString(string [] answers, string formName)
+        private string arrayToString(string[] answers, string formName)
         {
             string result = formName;
             foreach (var b in answers)
@@ -445,7 +302,7 @@ namespace XTest
 
         private void ButtonTheory_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ButtonReport_Click_1(object sender, EventArgs e)
@@ -455,7 +312,7 @@ namespace XTest
 
         private void ButtonTest_Click_1(object sender, EventArgs e)
         {
-
+            FindForm(a, true);
         }
     }
 }
