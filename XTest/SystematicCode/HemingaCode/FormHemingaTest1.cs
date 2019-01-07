@@ -71,7 +71,10 @@ namespace XTest.SystematicCode.HemingaCode
         private void ChangeForm()
         {
             if (_codec == false)
+            {
+                label1.Text = "Декодирование";
                 TitleTask.Text = "Декодируйте сообщение";
+            }
 
             if (_isTest)
             {
