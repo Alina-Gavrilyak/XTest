@@ -22,7 +22,6 @@ namespace XTest
         private TreeNode r; //other codes
         private TreeNode selectedNode;
 
-
         public MainForm()
         {
             InitializeComponent();
@@ -106,26 +105,36 @@ namespace XTest
 
         private void ButtonTraining_Click_1(object sender, EventArgs e)
         {
-            FindForm(a, false);
+
+            FindForm(a);
+
+            MenuItem[] menuItems = new MenuItem[]{
+                            new MenuItem("Кодирование", btnCodecMenuItems),
+                            new MenuItem("Декодирование", btnCodecMenuItems)
+                        };
+
+            ContextMenu buttonMenu = new ContextMenu(menuItems);
+            buttonMenu.Show(ButtonTraining, new System.Drawing.Point(20, 20));
+            //обучение
         }
 
-        private void FindForm(TreeNode parentNode, bool isTest)
+        private void FindForm(TreeNode parentNode)
         {
             if (parentNode.IsSelected)
             {
                 selectedNode = parentNode;
-                OpenForm(parentNode.Text, isTest);
             }
             else
             {
                 foreach (TreeNode subNode in parentNode.Nodes)
                 {
-                    FindForm(subNode, isTest);
+                    FindForm(subNode);
                 }
             }
         }
 
-        private void OpenForm(string formName, bool isTest)
+
+        private void OpenForm(string formName, bool isTest, bool codec = true)
         {
             if (formName.Equals("Код Элайеса"))
             {
@@ -142,27 +151,17 @@ namespace XTest
             }
             else if (formName.Equals("Код Хеминга 1"))
             {
-                if (isTest)
-                {
-                    SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1(true);
-                    form.Show();
-                }
-                else
-                {
-                    MenuItem[] menuItems = new MenuItem[]{
-                            new MenuItem("Кодирование", btnCodecMenuItems),
-                            new MenuItem("Декодирование", btnCodecMenuItems)
-                        };
 
-                    ContextMenu buttonMenu = new ContextMenu(menuItems);
-                    buttonMenu.Show(ButtonTraining, new System.Drawing.Point(20, 20));
-                }
+                SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1(isTest, codec);
+                form.Show();
+
             }
 
             // cyclic codes
-            else if (formName.Equals("Код Абрамса"))
+            else if (formName.Equals("Коды Абрамсона"))
             {
-                CyclicCode.AbramsonaCode.FormAbramsTest1 form = new CyclicCode.AbramsonaCode.FormAbramsTest1();
+
+                CyclicCode.AbramsonaCode.FormAbramsTest1 form = new CyclicCode.AbramsonaCode.FormAbramsTest1(isTest,codec);
                 form.Show();
             }
             else if (formName.Equals("Код Файра"))
@@ -255,9 +254,7 @@ namespace XTest
 
             bool codec = (n == "Кодирование");
 
-            SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1(false, codec);
-            form.Show();
-
+            OpenForm(selectedNode.Text, false, codec);
         }
 
 
@@ -312,7 +309,8 @@ namespace XTest
 
         private void ButtonTest_Click_1(object sender, EventArgs e)
         {
-            FindForm(a, true);
+            FindForm(a);
+            OpenForm(selectedNode.Text, true);
         }
     }
 }
