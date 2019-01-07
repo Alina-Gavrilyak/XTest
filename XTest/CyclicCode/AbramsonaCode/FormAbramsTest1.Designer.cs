@@ -140,6 +140,7 @@
             this.ShowAnswer.TabIndex = 49;
             this.ShowAnswer.Text = "Ответ";
             this.ShowAnswer.UseVisualStyleBackColor = true;
+            this.ShowAnswer.Click += new System.EventHandler(this.ShowAnswer_Click);
             // 
             // btnCheck
             // 

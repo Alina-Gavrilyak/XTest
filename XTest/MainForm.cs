@@ -172,7 +172,7 @@ namespace XTest
             }
             else if (formName.Equals("Код Хеминга 2"))
             {
-                CyclicCode.HemingaCode.FormHemingaTest1 form = new CyclicCode.HemingaCode.FormHemingaTest1();
+                CyclicCode.HemingaCode.FormHemingaTest1 form = new CyclicCode.HemingaCode.FormHemingaTest1(isTest, codec);
                 form.Show();
             }
             else if (formName.Equals("Код БЧХ"))
