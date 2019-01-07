@@ -56,9 +56,12 @@ namespace XTest.SystematicCode.ElaesaCode
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormElaesaTest2 fm1 = new FormElaesaTest2();
-            fm1.Show();
-            this.Close();
+            
+        }
+
+        private void FormElaesaTest1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -33,11 +33,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(154, 312);
+            this.button1.Location = new System.Drawing.Point(163, 361);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 32);
@@ -48,7 +49,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(22, 223);
+            this.textBox1.Location = new System.Drawing.Point(31, 272);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(227, 20);
@@ -57,7 +58,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 184);
+            this.label3.Location = new System.Drawing.Point(31, 233);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 13);
@@ -67,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 106);
+            this.label2.Location = new System.Drawing.Point(31, 155);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(139, 13);
@@ -77,18 +78,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 69);
+            this.label1.Location = new System.Drawing.Point(31, 118);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(132, 13);
             this.label1.TabIndex = 5;
             this.label1.Text = "Закодируйте сообщение";
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(31, 73);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(117, 25);
+            this.metroLabel1.TabIndex = 38;
+            this.metroLabel1.Text = "Кодирование";
+            // 
             // FormBergerTest1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(269, 366);
+            this.ClientSize = new System.Drawing.Size(294, 418);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
@@ -98,7 +110,7 @@
             this.Name = "FormBergerTest1";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Silver;
-            this.Text = "Кодирование";
+            this.Text = "Код Бергера";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +123,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

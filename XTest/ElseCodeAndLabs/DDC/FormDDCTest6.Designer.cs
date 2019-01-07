@@ -35,13 +35,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // labelResult
             // 
             this.labelResult.AutoSize = true;
             this.labelResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelResult.Location = new System.Drawing.Point(82, 233);
+            this.labelResult.Location = new System.Drawing.Point(48, 299);
             this.labelResult.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(0, 26);
@@ -62,7 +63,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(28, 218);
+            this.textBox1.Location = new System.Drawing.Point(35, 249);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(359, 26);
@@ -72,7 +73,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label4.Location = new System.Drawing.Point(24, 184);
+            this.label4.Location = new System.Drawing.Point(31, 215);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(93, 20);
@@ -83,7 +84,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(19, 128);
+            this.label3.Location = new System.Drawing.Point(26, 159);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 20);
@@ -94,7 +95,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(234, 83);
+            this.label2.Location = new System.Drawing.Point(232, 114);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 20);
@@ -105,18 +106,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(19, 83);
+            this.label1.Location = new System.Drawing.Point(26, 114);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(202, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Декодируйте сообщение:";
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(21, 71);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(136, 25);
+            this.metroLabel1.TabIndex = 37;
+            this.metroLabel1.Text = "Декодирование";
+            // 
             // FormDDCTest6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 359);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.textBox1);
@@ -129,7 +141,7 @@
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Silver;
-            this.Text = "Декодирование";
+            this.Text = "Двоично-десятичный код";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +156,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }

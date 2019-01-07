@@ -85,9 +85,9 @@ namespace XTest.SystematicCode.ElaesaCode
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormElaesaTest6 fm1 = new FormElaesaTest6();
             this.Close();
-            fm1.Show();
         }
+
+        
     }
 }

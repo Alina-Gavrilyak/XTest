@@ -33,6 +33,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.SuspendLayout();
             // 
             // button1
@@ -48,7 +49,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(25, 182);
+            this.textBox1.Location = new System.Drawing.Point(25, 211);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(207, 20);
@@ -57,7 +58,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 153);
+            this.label3.Location = new System.Drawing.Point(22, 182);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(191, 13);
@@ -67,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(33, 117);
+            this.label2.Location = new System.Drawing.Point(33, 146);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(73, 13);
@@ -77,18 +78,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 76);
+            this.label1.Location = new System.Drawing.Point(22, 105);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 13);
             this.label1.TabIndex = 11;
             this.label1.Text = "Принятая комбинация:";
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(23, 69);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(136, 25);
+            this.metroLabel1.TabIndex = 41;
+            this.metroLabel1.Text = "Декодирование";
+            // 
             // FormBChHTest6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(252, 366);
+            this.Controls.Add(this.metroLabel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
@@ -98,7 +110,7 @@
             this.Name = "FormBChHTest6";
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Silver;
-            this.Text = "Декодирование";
+            this.Text = "Код БЧХ";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,5 +123,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
     }
 }
