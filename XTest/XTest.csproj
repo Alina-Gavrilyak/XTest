@@ -94,6 +94,7 @@
     <Compile Include="CyclicCode\FairaCode\FormFairaTest6.Designer.cs">
       <DependentUpon>FormFairaTest6.cs</DependentUpon>
     </Compile>
+    <Compile Include="CyclicCode\HemingaCode\HemingaData.cs" />
     <Compile Include="CyclicCode\HemingaCode\FormHemingaTest1.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -161,9 +161,5 @@ namespace XTest.CyclicCode.AbramsonaCode
             result.Text = correctAnswer;
         }
 
-        private void Check_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
