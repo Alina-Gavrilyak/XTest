@@ -67,6 +67,7 @@
     <Compile Include="CyclicCode\AbramsonaCode\FormAbramsTest6.Designer.cs">
       <DependentUpon>FormAbramsTest6.cs</DependentUpon>
     </Compile>
+    <Compile Include="CyclicCode\BChHCode\BCHData.cs" />
     <Compile Include="CyclicCode\BChHCode\FormBChHTest1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +80,7 @@
     <Compile Include="CyclicCode\BChHCode\FormBChHTest6.Designer.cs">
       <DependentUpon>FormBChHTest6.cs</DependentUpon>
     </Compile>
+    <Compile Include="CyclicCode\FairaCode\FairaData.cs" />
     <Compile Include="CyclicCode\FairaCode\FormFairaTest1.cs">
       <SubType>Form</SubType>
     </Compile>

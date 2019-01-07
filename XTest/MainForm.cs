@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Components;
 using MetroFramework.Forms;
+using XTest.CyclicCode.FairaCode;
 
 namespace XTest
 {
@@ -165,10 +166,10 @@ namespace XTest
                 CyclicCode.AbramsonaCode.FormAbramsTest1 form = new CyclicCode.AbramsonaCode.FormAbramsTest1();
                 form.Show();
             }
-            else if (formName.Equals("Код Файра"))
+            else if (formName.Equals("Коды Файра"))
             {
-                CyclicCode.FairaCode.FormFairaTest1 form = new CyclicCode.FairaCode.FormFairaTest1();
-                form.Show();
+                    FormFairaTest1 form = new FormFairaTest1(true);
+                    form.Show();
             }
             else if (formName.Equals("Код Хеминга 2"))
             {
@@ -257,7 +258,6 @@ namespace XTest
 
             SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1(false, codec);
             form.Show();
-
         }
 
 
