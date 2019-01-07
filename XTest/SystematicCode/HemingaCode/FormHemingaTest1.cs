@@ -15,21 +15,22 @@ namespace XTest.SystematicCode.HemingaCode
     public partial class FormHemingaTest1 : MetroForm
     {
         private string correctAnswer;
-        private static int countQuestion;
+        private static int countPassedQuestion;
         private static int countCorrectAnswer;
         private static int maxCount = 10;
 
-        private static bool _isTest;
-        private static bool? _codec;
+        private bool _isTest;
+        private bool _codec;
 
-        public FormHemingaTest1(bool isTest, bool? codec)
+        public FormHemingaTest1(bool isTest, bool codec = true)
         {
             InitializeComponent();
-            FillFormData(codec);
-            ChangeForm(isTest, codec);
 
             _isTest = isTest;
             _codec = codec;
+
+            FillFormData();
+            ChangeForm();
 
             if (Settings.Theme == MyTheme.Black)
                 BlackTheme();
@@ -37,48 +38,46 @@ namespace XTest.SystematicCode.HemingaCode
 
 
 
-        private void FillFormData(bool? codec)
+        private void FillFormData()
         {
             Random r = new Random();
             HemingaData data = new HemingaData();
             KeyValuePair<string, string> item;
-            if (codec != null)
-                if (codec == true)
-                {
-                    int skipNumber = r.Next(0, data.CodecData.Count);
+            if (_isTest)
+            {
+                int skipNumber = r.Next(0, 15);
+
+                if (countPassedQuestion < maxCount / 2)
                     item = data.CodecData.Skip(skipNumber).First();
-                }
                 else
                 {
-                    int skipNumber = r.Next(0, data.DeCodecData.Count);
-                    item = data.CodecData.Skip(skipNumber).First();
+                    item = data.DeCodecData.Skip(skipNumber).First();
+                    _codec = false;
                 }
+            }
             else
             {
-                if (countQuestion < 5)
-                {
-                    int skipNumber = r.Next(0, data.CodecData.Count);
+                int skipNumber = r.Next(15, 25);
+
+                if (_codec)
                     item = data.CodecData.Skip(skipNumber).First();
-                    codec = true;
-                }
                 else
-                {
-                    int skipNumber = r.Next(0, data.DeCodecData.Count);
                     item = data.DeCodecData.Skip(skipNumber).First();
-                    codec = false;
-                }
             }
 
             label2.Text = item.Key;
             correctAnswer = item.Value;
         }
-        private void ChangeForm(bool isTest, bool? codec)
+        private void ChangeForm()
         {
-            if (codec != null && codec == false)
+            if (_codec == false)
                 TitleTask.Text = "Декодируйте сообщение";
 
-            if (isTest)
+            if (_isTest)
+            {
                 Check.Enabled = false;
+                ShowAnswer.Enabled = false;
+            }
         }
 
         private void BlackTheme()
@@ -119,25 +118,42 @@ namespace XTest.SystematicCode.HemingaCode
 
         private void BtnNext_Click(object sender, EventArgs e)
         {
-            countQuestion++;
+            if (_isTest)
+            {
+                countPassedQuestion++;
 
-            if (result.Text == correctAnswer)
-            {
-                countCorrectAnswer++;
-            }
-            
-            if(maxCount > countQuestion)
-            {
-                SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1(_isTest, _codec);
-                form.Show();
-                this.Close();
+                if (result.Text == correctAnswer)
+                {
+                    countCorrectAnswer++;
+                }
+
+                if (maxCount > countPassedQuestion)
+                {
+                    FormHemingaTest1 form = new FormHemingaTest1(true);
+                    form.Show();
+                    this.Close();
+                }
+                else
+                {
+                    int mark = countCorrectAnswer * 5 / countPassedQuestion;
+                    ResultForm form = new ResultForm(mark, "Систематический код Хемминга", countCorrectAnswer, countPassedQuestion);
+                    form.Show();
+                    countPassedQuestion = 0;
+                    countCorrectAnswer = 0;
+                    this.Close();
+                }
             }
             else
             {
+                FormHemingaTest1 form = new FormHemingaTest1(false, _codec);
+                form.Show();
                 this.Close();
-                //result form show
             }
+        }
 
+        private void ShowAnswer_Click(object sender, EventArgs e)
+        {
+            result.Text = correctAnswer;
         }
     }
 }

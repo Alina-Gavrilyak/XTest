@@ -35,6 +35,7 @@
             this.BtnNext = new System.Windows.Forms.Button();
             this.CheckingResultLabel = new System.Windows.Forms.Label();
             this.Check = new System.Windows.Forms.Button();
+            this.ShowAnswer = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TitleTask
@@ -77,7 +78,7 @@
             // 
             // BtnNext
             // 
-            this.BtnNext.Location = new System.Drawing.Point(342, 658);
+            this.BtnNext.Location = new System.Drawing.Point(370, 657);
             this.BtnNext.Margin = new System.Windows.Forms.Padding(4);
             this.BtnNext.Name = "BtnNext";
             this.BtnNext.Size = new System.Drawing.Size(154, 71);
@@ -98,7 +99,7 @@
             // 
             // Check
             // 
-            this.Check.Location = new System.Drawing.Point(180, 658);
+            this.Check.Location = new System.Drawing.Point(208, 657);
             this.Check.Margin = new System.Windows.Forms.Padding(4);
             this.Check.Name = "Check";
             this.Check.Size = new System.Drawing.Size(152, 71);
@@ -107,11 +108,23 @@
             this.Check.UseVisualStyleBackColor = true;
             this.Check.Click += new System.EventHandler(this.btnCheck_Click);
             // 
+            // ShowAnswer
+            // 
+            this.ShowAnswer.Location = new System.Drawing.Point(48, 656);
+            this.ShowAnswer.Margin = new System.Windows.Forms.Padding(4);
+            this.ShowAnswer.Name = "ShowAnswer";
+            this.ShowAnswer.Size = new System.Drawing.Size(152, 71);
+            this.ShowAnswer.TabIndex = 7;
+            this.ShowAnswer.Text = "Ответ";
+            this.ShowAnswer.UseVisualStyleBackColor = true;
+            this.ShowAnswer.Click += new System.EventHandler(this.ShowAnswer_Click);
+            // 
             // FormHemingaTest1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 763);
+            this.Controls.Add(this.ShowAnswer);
             this.Controls.Add(this.Check);
             this.Controls.Add(this.CheckingResultLabel);
             this.Controls.Add(this.BtnNext);
@@ -139,5 +152,6 @@
         private System.Windows.Forms.Button BtnNext;
         private System.Windows.Forms.Label CheckingResultLabel;
         private System.Windows.Forms.Button Check;
+        private System.Windows.Forms.Button ShowAnswer;
     }
 }
