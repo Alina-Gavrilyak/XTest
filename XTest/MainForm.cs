@@ -167,7 +167,7 @@ namespace XTest
             }
             else if (formName.Equals("Коды Файра"))
             {
-                    FormFairaTest1 form = new FormFairaTest1(true);
+                    FormFairaTest1 form = new FormFairaTest1(isTest, codec);
                     form.Show();
             }
             else if (formName.Equals("Код Хеминга 2"))
@@ -177,7 +177,7 @@ namespace XTest
             }
             else if (formName.Equals("Код БЧХ"))
             {
-                CyclicCode.BChHCode.FormBChHTest1 form = new CyclicCode.BChHCode.FormBChHTest1();
+                CyclicCode.BChHCode.FormBChHTest1 form = new CyclicCode.BChHCode.FormBChHTest1(isTest,codec);
                 form.Show();
             }
 
@@ -190,8 +190,16 @@ namespace XTest
             }
             else if (formName.Equals("Код с проверкой по модулю q"))
             {
-                Non_binaryCode.CodeWithModuleTest.FormModuleTest1 form = new Non_binaryCode.CodeWithModuleTest.FormModuleTest1();
-                form.Show();
+                if (codec)
+                {
+                    Non_binaryCode.CodeWithModuleTest.FormModuleTest1 form = new Non_binaryCode.CodeWithModuleTest.FormModuleTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+                    Non_binaryCode.CodeWithModuleTest.FormModuleTest6 form = new Non_binaryCode.CodeWithModuleTest.FormModuleTest6(isTest);
+                    form.Show();
+                }
             }
             else if (formName.Equals("Код с простым повторением"))
             {

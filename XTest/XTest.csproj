@@ -75,24 +75,12 @@
     <Compile Include="CyclicCode\BChHCode\FormBChHTest1.Designer.cs">
       <DependentUpon>FormBChHTest1.cs</DependentUpon>
     </Compile>
-    <Compile Include="CyclicCode\BChHCode\FormBChHTest6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CyclicCode\BChHCode\FormBChHTest6.Designer.cs">
-      <DependentUpon>FormBChHTest6.cs</DependentUpon>
-    </Compile>
     <Compile Include="CyclicCode\FairaCode\FairaData.cs" />
     <Compile Include="CyclicCode\FairaCode\FormFairaTest1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CyclicCode\FairaCode\FormFairaTest1.Designer.cs">
       <DependentUpon>FormFairaTest1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CyclicCode\FairaCode\FormFairaTest6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CyclicCode\FairaCode\FormFairaTest6.Designer.cs">
-      <DependentUpon>FormFairaTest6.cs</DependentUpon>
     </Compile>
     <Compile Include="CyclicCode\HemingaCode\HemingaData.cs" />
     <Compile Include="CyclicCode\HemingaCode\FormHemingaTest1.cs">
@@ -240,6 +228,7 @@
     <Compile Include="Non-binaryCode\CodeWithModuleTest\FormModuleTest1.Designer.cs">
       <DependentUpon>FormModuleTest1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Non-binaryCode\CodeWithModuleTest\ModuleTestData.cs" />
     <Compile Include="Non-binaryCode\IterativityCode\FormIterativityTest1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,14 +315,8 @@
     <EmbeddedResource Include="CyclicCode\BChHCode\FormBChHTest1.resx">
       <DependentUpon>FormBChHTest1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CyclicCode\BChHCode\FormBChHTest6.resx">
-      <DependentUpon>FormBChHTest6.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CyclicCode\FairaCode\FormFairaTest1.resx">
       <DependentUpon>FormFairaTest1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CyclicCode\FairaCode\FormFairaTest6.resx">
-      <DependentUpon>FormFairaTest6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CyclicCode\HemingaCode\FormHemingaTest1.resx">
       <DependentUpon>FormHemingaTest1.cs</DependentUpon>

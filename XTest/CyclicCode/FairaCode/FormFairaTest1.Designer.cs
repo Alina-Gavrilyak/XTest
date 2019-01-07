@@ -111,13 +111,14 @@
             // 
             // ShowAnswer
             // 
-            this.ShowAnswer.Location = new System.Drawing.Point(21, 306);
+            this.ShowAnswer.Location = new System.Drawing.Point(21, 307);
             this.ShowAnswer.Margin = new System.Windows.Forms.Padding(2);
             this.ShowAnswer.Name = "ShowAnswer";
             this.ShowAnswer.Size = new System.Drawing.Size(76, 37);
             this.ShowAnswer.TabIndex = 44;
             this.ShowAnswer.Text = "Ответ";
             this.ShowAnswer.UseVisualStyleBackColor = true;
+            this.ShowAnswer.Click += new System.EventHandler(this.ShowAnswer_Click);
             // 
             // Check
             // 
@@ -128,6 +129,7 @@
             this.Check.TabIndex = 43;
             this.Check.Text = "Проверка";
             this.Check.UseVisualStyleBackColor = true;
+            this.Check.Click += new System.EventHandler(this.Check_Click);
             // 
             // BtnNext
             // 

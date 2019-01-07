@@ -23,7 +23,7 @@ namespace XTest.CyclicCode.FairaCode
         private bool _isTest;
         private bool _codec;
 
-        public FormFairaTest1(bool isTest, bool codec = true)
+        public FormFairaTest1(bool isTest, bool codec)
         {
             InitializeComponent();
 
@@ -114,19 +114,6 @@ namespace XTest.CyclicCode.FairaCode
             }
         }
 
-        private void btnCheck_Click(object sender, EventArgs e)
-        {
-            if (result.Text == correctAnswer)
-            {
-                CheckingResultLabel.Text = "Правильно";
-            }
-            else
-            {
-                CheckingResultLabel.Text = "Не правильно";
-            }
-
-        }
-
         private void BtnNext_Click(object sender, EventArgs e)
         {
             if (_isTest)
@@ -140,14 +127,14 @@ namespace XTest.CyclicCode.FairaCode
 
                 if (maxCount > countPassedQuestion)
                 {
-                    FormFairaTest1 form = new FormFairaTest1(true);
+                    FormFairaTest1 form = new FormFairaTest1(true,_codec);
                     form.Show();
                     this.Close();
                 }
                 else
                 {
                     int mark = countCorrectAnswer * 5 / countPassedQuestion;
-                    ResultForm form = new ResultForm(mark, "Систематический код Хемминга", countCorrectAnswer, countPassedQuestion);
+                    ResultForm form = new ResultForm(mark, Text, countCorrectAnswer, countPassedQuestion);
                     form.Show();
                     countPassedQuestion = 0;
                     countCorrectAnswer = 0;
@@ -159,6 +146,18 @@ namespace XTest.CyclicCode.FairaCode
                 FormFairaTest1 form = new FormFairaTest1(false, _codec);
                 form.Show();
                 this.Close();
+            }
+        }
+
+        private void Check_Click(object sender, EventArgs e)
+        {
+            if (result.Text == correctAnswer)
+            {
+                CheckingResultLabel.Text = "Правильно";
+            }
+            else
+            {
+                CheckingResultLabel.Text = "Не правильно";
             }
         }
 

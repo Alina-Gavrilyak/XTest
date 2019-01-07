@@ -72,7 +72,7 @@
             // result
             // 
             this.result.Location = new System.Drawing.Point(27, 188);
-            this.result.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.result.Margin = new System.Windows.Forms.Padding(2);
             this.result.Name = "result";
             this.result.Size = new System.Drawing.Size(177, 20);
             this.result.TabIndex = 3;
@@ -80,7 +80,7 @@
             // BtnNext
             // 
             this.BtnNext.Location = new System.Drawing.Point(185, 342);
-            this.BtnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnNext.Margin = new System.Windows.Forms.Padding(2);
             this.BtnNext.Name = "BtnNext";
             this.BtnNext.Size = new System.Drawing.Size(77, 37);
             this.BtnNext.TabIndex = 4;
@@ -101,7 +101,7 @@
             // Check
             // 
             this.Check.Location = new System.Drawing.Point(104, 342);
-            this.Check.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Check.Margin = new System.Windows.Forms.Padding(2);
             this.Check.Name = "Check";
             this.Check.Size = new System.Drawing.Size(76, 37);
             this.Check.TabIndex = 6;
@@ -111,8 +111,8 @@
             // 
             // ShowAnswer
             // 
-            this.ShowAnswer.Location = new System.Drawing.Point(24, 341);
-            this.ShowAnswer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ShowAnswer.Location = new System.Drawing.Point(24, 342);
+            this.ShowAnswer.Margin = new System.Windows.Forms.Padding(2);
             this.ShowAnswer.Name = "ShowAnswer";
             this.ShowAnswer.Size = new System.Drawing.Size(76, 37);
             this.ShowAnswer.TabIndex = 7;
@@ -145,7 +145,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TitleTask);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormHemingaTest1";
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Resizable = false;
