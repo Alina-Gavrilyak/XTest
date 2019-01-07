@@ -184,7 +184,9 @@ namespace XTest
             //non binary codes
             else if (formName.Equals("Первичные недвоичные коды"))
             {
-
+                //if()
+                //Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest1 form = new Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest1(true);
+                //form.Show();
             }
             else if (formName.Equals("Код с проверкой по модулю q"))
             {

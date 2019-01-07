@@ -9,17 +9,68 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Components;
 using MetroFramework.Forms;
+using XTest.CyclicCode.AbramsonaCode;
 
 namespace XTest.Non_binaryCode.PrimaryNon_binaryCode
 {
     public partial class FormPrimaryNon_binaryTest1 : MetroForm
     {
-        public FormPrimaryNon_binaryTest1()
+
+        private string correctAnswer;
+        private static int countPassedQuestion;
+        private static int countCorrectAnswer;
+        private static int maxCount = 10;
+
+        private bool _isTest;
+
+        public FormPrimaryNon_binaryTest1(bool isTest)
         {
             InitializeComponent();
+
+            _isTest = isTest;
+
+            FillFormData();
+            ChangeForm();
+
             if (Settings.Theme == MyTheme.Black)
                 BlackTheme();
         }
+
+
+        private void FillFormData()
+        {
+            Random r = new Random();
+            PrimaryNonBinaryData data = new PrimaryNonBinaryData();
+            KeyValuePair<string, string> item;
+            if (_isTest)
+            {
+                int skipNumber = r.Next(0, 15);
+                item = data.CodecData.Skip(skipNumber).First();
+
+            }
+            else
+            {
+                int skipNumber = r.Next(15, 25);
+                item = data.CodecData.Skip(skipNumber).First();
+            }
+
+            string[] keys = item.Key.Split(',');
+            qLabel.Text = keys[0];
+            nLabel.Text = keys[1];
+            alphavitLabel.Text = keys[2];
+            typeLabel.Text = keys[3];
+            correctAnswer = item.Value;
+        }
+        private void ChangeForm()
+        {
+
+            if (_isTest)
+            {
+                btnCheck.Enabled = false;
+                ShowAnswer.Enabled = false;
+            }
+        }
+
         private void BlackTheme()
         {
             this.Theme = MetroFramework.MetroThemeStyle.Dark;
@@ -43,9 +94,57 @@ namespace XTest.Non_binaryCode.PrimaryNon_binaryCode
             }
         }
 
-        private void label10_Click(object sender, EventArgs e)
+        private void btnCheck_Click(object sender, EventArgs e)
         {
+            if (result.Text == correctAnswer)
+            {
+                CheckingResultLabel.Text = "Правильно";
+            }
+            else
+            {
+                CheckingResultLabel.Text = "Не правильно";
+            }
 
+        }
+
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            if (_isTest)
+            {
+                countPassedQuestion++;
+
+                if (result.Text == correctAnswer)
+                {
+                    countCorrectAnswer++;
+                }
+
+                if (maxCount > countPassedQuestion)
+                {
+                    FormPrimaryNon_binaryTest1 form = new FormPrimaryNon_binaryTest1(true);
+                    form.Show();
+                    this.Close();
+                }
+                else
+                {
+                    int mark = countCorrectAnswer * 5 / countPassedQuestion;
+                    ResultForm form = new ResultForm(mark, this.Text, countCorrectAnswer, countPassedQuestion);
+                    form.Show();
+                    countPassedQuestion = 0;
+                    countCorrectAnswer = 0;
+                    this.Close();
+                }
+            }
+            else
+            {
+                FormPrimaryNon_binaryTest1 form = new FormPrimaryNon_binaryTest1(false);
+                form.Show();
+                this.Close();
+            }
+        }
+
+        private void ShowAnswer_Click(object sender, EventArgs e)
+        {
+            result.Text = correctAnswer;
         }
     }
 }
