@@ -143,12 +143,7 @@
     <Compile Include="ElseCodeAndLabs\GrayCode\FormGrayTest1.Designer.cs">
       <DependentUpon>FormGrayTest1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ElseCodeAndLabs\GrayCode\FormGrayTest6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ElseCodeAndLabs\GrayCode\FormGrayTest6.Designer.cs">
-      <DependentUpon>FormGrayTest6.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ElseCodeAndLabs\GrayCode\GrayData.cs" />
     <Compile Include="ElseCodeAndLabs\HaffmenaCode\FormHaffmenaTest1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -346,9 +341,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElseCodeAndLabs\GrayCode\FormGrayTest1.resx">
       <DependentUpon>FormGrayTest1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ElseCodeAndLabs\GrayCode\FormGrayTest6.resx">
-      <DependentUpon>FormGrayTest6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElseCodeAndLabs\HaffmenaCode\FormHaffmenaTest1.resx">
       <DependentUpon>FormHaffmenaTest1.cs</DependentUpon>

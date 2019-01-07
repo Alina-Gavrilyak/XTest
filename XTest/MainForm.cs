@@ -213,7 +213,7 @@ namespace XTest
             //other codes
             else if (formName.Equals("Код Грея"))
             {
-                ElseCodeAndLabs.GrayCode.FormGrayTest1 form = new ElseCodeAndLabs.GrayCode.FormGrayTest1();
+                ElseCodeAndLabs.GrayCode.FormGrayTest1 form = new ElseCodeAndLabs.GrayCode.FormGrayTest1(isTest,codec);
                 form.Show();
             }
             else if (formName.Equals("Двоично-десятичный код"))
