@@ -28,32 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.result = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.ShowAnswer = new System.Windows.Forms.Button();
+            this.Check = new System.Windows.Forms.Button();
+            this.BtnNext = new System.Windows.Forms.Button();
+            this.CheckingResultLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // result
             // 
-            this.button1.Location = new System.Drawing.Point(154, 317);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 37);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Далее";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(22, 232);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(209, 20);
-            this.textBox1.TabIndex = 14;
+            this.result.Location = new System.Drawing.Point(22, 232);
+            this.result.Margin = new System.Windows.Forms.Padding(2);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(209, 20);
+            this.result.TabIndex = 14;
             // 
             // label3
             // 
@@ -95,14 +87,60 @@
             this.metroLabel1.TabIndex = 41;
             this.metroLabel1.Text = "Кодирование";
             // 
+            // ShowAnswer
+            // 
+            this.ShowAnswer.Location = new System.Drawing.Point(8, 321);
+            this.ShowAnswer.Margin = new System.Windows.Forms.Padding(2);
+            this.ShowAnswer.Name = "ShowAnswer";
+            this.ShowAnswer.Size = new System.Drawing.Size(76, 37);
+            this.ShowAnswer.TabIndex = 44;
+            this.ShowAnswer.Text = "Ответ";
+            this.ShowAnswer.UseVisualStyleBackColor = true;
+            this.ShowAnswer.Click += new System.EventHandler(this.ShowAnswer_Click);
+            // 
+            // Check
+            // 
+            this.Check.Location = new System.Drawing.Point(88, 321);
+            this.Check.Margin = new System.Windows.Forms.Padding(2);
+            this.Check.Name = "Check";
+            this.Check.Size = new System.Drawing.Size(76, 37);
+            this.Check.TabIndex = 43;
+            this.Check.Text = "Проверка";
+            this.Check.UseVisualStyleBackColor = true;
+            this.Check.Click += new System.EventHandler(this.btnCheck_Click);
+            // 
+            // BtnNext
+            // 
+            this.BtnNext.Location = new System.Drawing.Point(169, 321);
+            this.BtnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnNext.Name = "BtnNext";
+            this.BtnNext.Size = new System.Drawing.Size(77, 37);
+            this.BtnNext.TabIndex = 42;
+            this.BtnNext.Text = "Далее";
+            this.BtnNext.UseVisualStyleBackColor = true;
+            this.BtnNext.Click += new System.EventHandler(this.BtnNext_Click);
+            // 
+            // CheckingResultLabel
+            // 
+            this.CheckingResultLabel.AutoSize = true;
+            this.CheckingResultLabel.Location = new System.Drawing.Point(32, 266);
+            this.CheckingResultLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.CheckingResultLabel.Name = "CheckingResultLabel";
+            this.CheckingResultLabel.Size = new System.Drawing.Size(0, 13);
+            this.CheckingResultLabel.TabIndex = 45;
+            this.CheckingResultLabel.UseMnemonic = false;
+            // 
             // FormBChHTest1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(245, 366);
+            this.ClientSize = new System.Drawing.Size(254, 366);
+            this.Controls.Add(this.CheckingResultLabel);
+            this.Controls.Add(this.ShowAnswer);
+            this.Controls.Add(this.Check);
+            this.Controls.Add(this.BtnNext);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.result);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -117,12 +155,14 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox result;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.Button ShowAnswer;
+        private System.Windows.Forms.Button Check;
+        private System.Windows.Forms.Button BtnNext;
+        private System.Windows.Forms.Label CheckingResultLabel;
     }
 }

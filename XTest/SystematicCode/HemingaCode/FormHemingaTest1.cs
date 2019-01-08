@@ -22,7 +22,7 @@ namespace XTest.SystematicCode.HemingaCode
         private bool _isTest;
         private bool _codec;
 
-        public FormHemingaTest1(bool isTest, bool codec = true)
+        public FormHemingaTest1(bool isTest, bool codec)
         {
             InitializeComponent();
 
@@ -132,7 +132,7 @@ namespace XTest.SystematicCode.HemingaCode
 
                 if (maxCount > countPassedQuestion)
                 {
-                    FormHemingaTest1 form = new FormHemingaTest1(true);
+                    FormHemingaTest1 form = new FormHemingaTest1(true,_codec);
                     form.Show();
                     this.Close();
                 }

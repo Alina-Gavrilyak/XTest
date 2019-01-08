@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Components;
 using MetroFramework.Forms;
+using XTest.CyclicCode.FairaCode;
 
 namespace XTest
 {
@@ -21,7 +22,6 @@ namespace XTest
         private TreeNode t; //non-binary codes
         private TreeNode r; //other codes
         private TreeNode selectedNode;
-
 
         public MainForm()
         {
@@ -106,26 +106,36 @@ namespace XTest
 
         private void ButtonTraining_Click_1(object sender, EventArgs e)
         {
-            FindForm(a, false);
+
+            FindForm(a);
+
+            MenuItem[] menuItems = new MenuItem[]{
+                            new MenuItem("Кодирование", btnCodecMenuItems),
+                            new MenuItem("Декодирование", btnCodecMenuItems)
+                        };
+
+            ContextMenu buttonMenu = new ContextMenu(menuItems);
+            buttonMenu.Show(ButtonTraining, new System.Drawing.Point(20, 20));
+            //обучение
         }
 
-        private void FindForm(TreeNode parentNode, bool isTest)
+        private void FindForm(TreeNode parentNode)
         {
             if (parentNode.IsSelected)
             {
                 selectedNode = parentNode;
-                OpenForm(parentNode.Text, isTest);
             }
             else
             {
                 foreach (TreeNode subNode in parentNode.Nodes)
                 {
-                    FindForm(subNode, isTest);
+                    FindForm(subNode);
                 }
             }
         }
 
-        private void OpenForm(string formName, bool isTest)
+
+        private void OpenForm(string formName, bool isTest, bool codec = true)
         {
             if (formName.Equals("Код Элайеса"))
             {
@@ -142,58 +152,63 @@ namespace XTest
             }
             else if (formName.Equals("Код Хеминга 1"))
             {
-                if (isTest)
-                {
-                    SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1(true);
-                    form.Show();
-                }
-                else
-                {
-                    MenuItem[] menuItems = new MenuItem[]{
-                            new MenuItem("Кодирование", btnCodecMenuItems),
-                            new MenuItem("Декодирование", btnCodecMenuItems)
-                        };
 
-                    ContextMenu buttonMenu = new ContextMenu(menuItems);
-                    buttonMenu.Show(ButtonTraining, new System.Drawing.Point(20, 20));
-                }
+                SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1(isTest, codec);
+                form.Show();
             }
-
             // cyclic codes
-            else if (formName.Equals("Код Абрамса"))
+            else if (formName.Equals("Коды Абрамсона"))
             {
-                CyclicCode.AbramsonaCode.FormAbramsTest1 form = new CyclicCode.AbramsonaCode.FormAbramsTest1();
+
+                CyclicCode.AbramsonaCode.FormAbramsTest1 form = new CyclicCode.AbramsonaCode.FormAbramsTest1(isTest,codec);
                 form.Show();
             }
-            else if (formName.Equals("Код Файра"))
+            else if (formName.Equals("Коды Файра"))
             {
-                CyclicCode.FairaCode.FormFairaTest1 form = new CyclicCode.FairaCode.FormFairaTest1();
-                form.Show();
+                    FormFairaTest1 form = new FormFairaTest1(isTest, codec);
+                    form.Show();
             }
             else if (formName.Equals("Код Хеминга 2"))
             {
-                CyclicCode.HemingaCode.FormHemingaTest1 form = new CyclicCode.HemingaCode.FormHemingaTest1();
+                CyclicCode.HemingaCode.FormHemingaTest1 form = new CyclicCode.HemingaCode.FormHemingaTest1(isTest, codec);
                 form.Show();
             }
             else if (formName.Equals("Код БЧХ"))
             {
-                CyclicCode.BChHCode.FormBChHTest1 form = new CyclicCode.BChHCode.FormBChHTest1();
+                CyclicCode.BChHCode.FormBChHTest1 form = new CyclicCode.BChHCode.FormBChHTest1(isTest,codec);
                 form.Show();
             }
 
             //non binary codes
             else if (formName.Equals("Первичные недвоичные коды"))
             {
-
+                if (codec)
+                {
+                    Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest1 form = new Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+                    Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest2 form = new Non_binaryCode.PrimaryNon_binaryCode.FormPrimaryNon_binaryTest2(isTest);
+                    form.Show();
+                }
             }
             else if (formName.Equals("Код с проверкой по модулю q"))
             {
-                Non_binaryCode.CodeWithModuleTest.FormModuleTest1 form = new Non_binaryCode.CodeWithModuleTest.FormModuleTest1();
-                form.Show();
+                if (codec)
+                {
+                    Non_binaryCode.CodeWithModuleTest.FormModuleTest1 form = new Non_binaryCode.CodeWithModuleTest.FormModuleTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+                    Non_binaryCode.CodeWithModuleTest.FormModuleTest6 form = new Non_binaryCode.CodeWithModuleTest.FormModuleTest6(isTest);
+                    form.Show();
+                }
             }
             else if (formName.Equals("Код с простым повторением"))
             {
-                Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1 form = new Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1();
+                Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1 form = new Non_binaryCode.CodeWithaSimpleIteration.FormIterationTest1(isTest, codec);
                 form.Show();
             }
             else if (formName.Equals("Итеративный код"))
@@ -210,7 +225,8 @@ namespace XTest
             }
             else if (formName.Equals("Двоично-десятичный код"))
             {
-
+                FormDDCTest1 form = new FormDDCTest1(isTest, codec);
+                form.Show();
             }
             else if (formName.Equals("Код Бергера"))
             {
@@ -255,9 +271,7 @@ namespace XTest
 
             bool codec = (n == "Кодирование");
 
-            SystematicCode.HemingaCode.FormHemingaTest1 form = new SystematicCode.HemingaCode.FormHemingaTest1(false, codec);
-            form.Show();
-
+            OpenForm(selectedNode.Text, false, codec);
         }
 
 
@@ -466,7 +480,8 @@ namespace XTest
 
         private void ButtonTest_Click_1(object sender, EventArgs e)
         {
-            FindForm(a, true);
+            FindForm(a);
+            OpenForm(selectedNode.Text, true);
         }
     }
 }
