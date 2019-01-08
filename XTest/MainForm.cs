@@ -220,7 +220,7 @@ namespace XTest
             //other codes
             else if (formName.Equals("Код Грея"))
             {
-                ElseCodeAndLabs.GrayCode.FormGrayTest1 form = new ElseCodeAndLabs.GrayCode.FormGrayTest1();
+                ElseCodeAndLabs.GrayCode.FormGrayTest1 form = new ElseCodeAndLabs.GrayCode.FormGrayTest1(isTest,codec);
                 form.Show();
             }
             else if (formName.Equals("Двоично-десятичный код"))
@@ -230,7 +230,7 @@ namespace XTest
             }
             else if (formName.Equals("Код Бергера"))
             {
-                ElseCodeAndLabs.BergerCode.FormBergerTest1 form = new ElseCodeAndLabs.BergerCode.FormBergerTest1();
+                ElseCodeAndLabs.BergerCode.FormBergerTest1 form = new ElseCodeAndLabs.BergerCode.FormBergerTest1(isTest,codec);
                 form.Show();
             }
             else if (formName.Equals("Код Шенона-Фано"))
@@ -255,9 +255,16 @@ namespace XTest
             }
             else if (formName.Equals("Рекурентный код"))
             {
-
-                ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1 form = new ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1();
-                form.Show();
+                if (codec)
+                {
+                    ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1 form = new ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+                    ElseCodeAndLabs.RekyrentCode.FormRekyrentTest4 form = new ElseCodeAndLabs.RekyrentCode.FormRekyrentTest4(isTest);
+                    form.Show();
+                }
             }
             else if (formName.Equals("Канальные коды"))
             {

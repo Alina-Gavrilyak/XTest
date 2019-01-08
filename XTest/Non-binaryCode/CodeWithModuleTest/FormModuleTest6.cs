@@ -111,7 +111,7 @@ namespace XTest.Non_binaryCode.CodeWithModuleTest
                     int mark = countCorrectAnswer * 5 / countPassedQuestion;
                     ResultForm form = new ResultForm(mark, Text, countCorrectAnswer, countPassedQuestion);
                     form.Show();
-                    countPassedQuestion = 0;
+                    countPassedQuestion = 5;
                     countCorrectAnswer = 0;
                     this.Close();
                 }
