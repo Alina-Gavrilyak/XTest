@@ -12,18 +12,13 @@ using MetroFramework.Forms;
 
 namespace XTest
 {
-    public partial class ResultForm : MetroForm
+    public partial class Theory : MetroForm
     {
-        public ResultForm(int mark, string codeName, int correctAnswers, int countQuestions)
+        public Theory()
         {
             InitializeComponent();
             if (Settings.Theme == MyTheme.Black)
                 BlackTheme();
-            
-            label3.Text = mark.ToString();
-            label4.Text = codeName;
-            label6.Text = correctAnswers + " из " + countQuestions;
-            
         }
         private void BlackTheme()
         {
@@ -47,5 +42,7 @@ namespace XTest
                 }
             }
         }
+
+        
     }
 }
