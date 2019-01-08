@@ -245,8 +245,16 @@ namespace XTest
             }
             else if (formName.Equals("Коды-спутники"))
             {
-                ElseCodeAndLabs.SateliteCode.FormSateliteTest1 form = new ElseCodeAndLabs.SateliteCode.FormSateliteTest1();
-                form.Show();
+                if (codec)
+                {
+                    ElseCodeAndLabs.SateliteCode.FormSateliteTest1 form = new ElseCodeAndLabs.SateliteCode.FormSateliteTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+                    ElseCodeAndLabs.SateliteCode.FormSateliteTest4 form = new ElseCodeAndLabs.SateliteCode.FormSateliteTest4(isTest);
+                    form.Show();
+                }
             }
             else if (formName.Equals("Количество информации и энтропия"))
             {
