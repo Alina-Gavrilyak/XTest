@@ -57,12 +57,17 @@ namespace XTest.Non_binaryCode.CodeWithaSimpleIteration
             }
             else
             {
-                int skipNumber = r.Next(15, 25);
 
                 if (_codec)
+                {
+                    int skipNumber = r.Next(15, data.CodecData.Count);
                     item = data.CodecData.Skip(skipNumber).First();
+                }
                 else
+                {
+                    int skipNumber = r.Next(15, data.DeCodecData.Count);
                     item = data.DeCodecData.Skip(skipNumber).First();
+                }
             }
 
             taskLabel.Text = item.Key;
