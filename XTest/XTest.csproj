@@ -171,6 +171,7 @@
     <Compile Include="ElseCodeAndLabs\SateliteCode\FormSateliteTest4.Designer.cs">
       <DependentUpon>FormSateliteTest4.cs</DependentUpon>
     </Compile>
+    <Compile Include="ElseCodeAndLabs\SateliteCode\SateliteData.cs" />
     <Compile Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest1.cs">
       <SubType>Form</SubType>
     </Compile>
