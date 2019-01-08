@@ -14,16 +14,25 @@ namespace XTest
 {
     public partial class ResultForm : MetroForm
     {
+        private string codeName;
+        private int mark;
+        private int correctAnswers;
+        private int countQuestions;
+
         public ResultForm(int mark, string codeName, int correctAnswers, int countQuestions)
         {
             InitializeComponent();
             if (Settings.Theme == MyTheme.Black)
                 BlackTheme();
-            
+
+            this.codeName = codeName;
+            this.mark = mark;
+            this.correctAnswers = correctAnswers;
+            this.countQuestions = countQuestions;
+
             label3.Text = mark.ToString();
             label4.Text = codeName;
             label6.Text = correctAnswers + " из " + countQuestions;
-            
         }
         private void BlackTheme()
         {
@@ -46,6 +55,12 @@ namespace XTest
                     ((TextBox)c).ForeColor = Color.White;
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Report.AddReportRow(textBox1.Text,codeName,mark,correctAnswers,countQuestions);
+            this.Close();
         }
     }
 }

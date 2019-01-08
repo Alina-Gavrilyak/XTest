@@ -482,7 +482,8 @@ namespace XTest
 
         private void ButtonReport_Click_1(object sender, EventArgs e)
         {
-
+            Report r = new Report();
+            r.Show();
         }
 
         private void ButtonTest_Click_1(object sender, EventArgs e)
