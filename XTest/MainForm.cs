@@ -220,7 +220,7 @@ namespace XTest
             //other codes
             else if (formName.Equals("Код Грея"))
             {
-                ElseCodeAndLabs.GrayCode.FormGrayTest1 form = new ElseCodeAndLabs.GrayCode.FormGrayTest1();
+                ElseCodeAndLabs.GrayCode.FormGrayTest1 form = new ElseCodeAndLabs.GrayCode.FormGrayTest1(isTest,codec);
                 form.Show();
             }
             else if (formName.Equals("Двоично-десятичный код"))
@@ -230,7 +230,7 @@ namespace XTest
             }
             else if (formName.Equals("Код Бергера"))
             {
-                ElseCodeAndLabs.BergerCode.FormBergerTest1 form = new ElseCodeAndLabs.BergerCode.FormBergerTest1();
+                ElseCodeAndLabs.BergerCode.FormBergerTest1 form = new ElseCodeAndLabs.BergerCode.FormBergerTest1(isTest,codec);
                 form.Show();
             }
             else if (formName.Equals("Код Шенона-Фано"))
@@ -263,9 +263,16 @@ namespace XTest
             }
             else if (formName.Equals("Рекурентный код"))
             {
-
-                ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1 form = new ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1();
-                form.Show();
+                if (codec)
+                {
+                    ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1 form = new ElseCodeAndLabs.RekyrentCode.FormRekyrentTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+                    ElseCodeAndLabs.RekyrentCode.FormRekyrentTest4 form = new ElseCodeAndLabs.RekyrentCode.FormRekyrentTest4(isTest);
+                    form.Show();
+                }
             }
             else if (formName.Equals("Канальные коды"))
             {
@@ -322,9 +329,163 @@ namespace XTest
             return result;
         }
 
+        private void FindTheory(TreeNode parentNode, bool isTest)
+        {
+            if (parentNode.IsSelected)
+            {
+                selectedNode = parentNode;
+                OpenTheory(parentNode.Text, isTest);
+            }
+            else
+            {
+                foreach (TreeNode subNode in parentNode.Nodes)
+                {
+                    FindTheory(subNode, isTest);
+                }
+            }
+        }
+
+        private void OpenTheory(string formName, bool isTest)
+        {
+            if (formName.Equals("Код Элайеса"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Код Элайеса.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Код Варшамова"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Код Варшамова.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Коды Рида-Милеера"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Код Рида-Маллера.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Код Хеминга 1"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Код Хемминга.pdf";
+                teory.Show();
+            }
+
+            // cyclic codes
+            else if (formName.Equals("Коды Абрамсона"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Коды Абрамсона.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Коды Файра"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Код Файера.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Код Хеминга 2"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Цыкличный код Хемминга.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Код БЧХ"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Код БЧХ.pdf";
+                teory.Show();
+            }
+
+            //non binary codes
+            else if (formName.Equals("Первичные недвоичные коды"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Первчиные недвоичные коды.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Код с проверкой по модулю q"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Коды с проверкой по модулю q.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Код с простым повторением"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Код с простым повторением.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Итеративный код"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Итеративный код.pdf";
+                teory.Show();
+            }
+
+            //other codes
+            else if (formName.Equals("Код Грея"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Код Грея.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Двоично-десятичный код"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Двоично-десятичный код.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Код Бергера"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Код Бергера.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Код Шенона-Фано"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Код Шеннона-Фано.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Код Хаффмена"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Код Хаффмана.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Коды-спутники"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Коды-спутники.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Количество информации и энтропия"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Количество информации и энтропия.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Рекурентный код"))
+            {
+
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Рекурентный код.pdf";
+                teory.Show();
+            }
+            else if (formName.Equals("Канальные коды"))
+            {
+                Theory teory = new Theory();
+                teory.axAcroPDF1.src = @"D:\Education\XTestV1\XTest\Канальные коды.pdf";
+                teory.Show();
+            }
+
+        }
+
         private void ButtonTheory_Click(object sender, EventArgs e)
         {
-
+            FindTheory(a, true);
         }
 
         private void ButtonReport_Click_1(object sender, EventArgs e)

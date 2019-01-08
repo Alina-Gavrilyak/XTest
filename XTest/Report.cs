@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using MetroFramework.Components;
 using MetroFramework.Forms;
 
-namespace XTest.ElseCodeAndLabs.GrayCode
+namespace XTest
 {
-    public partial class FormGrayTest6 : MetroForm
+    public partial class Report : MetroForm
     {
-        public FormGrayTest6()
+        public Report()
         {
             InitializeComponent();
             if (Settings.Theme == MyTheme.Black)
