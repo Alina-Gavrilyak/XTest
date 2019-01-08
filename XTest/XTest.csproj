@@ -95,17 +95,12 @@
     <Compile Include="CyclicCode\HemingaCode\FormHemingaTest6.Designer.cs">
       <DependentUpon>FormHemingaTest6.cs</DependentUpon>
     </Compile>
+    <Compile Include="ElseCodeAndLabs\BergerCode\BergerData.cs" />
     <Compile Include="ElseCodeAndLabs\BergerCode\FormBergerTest1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ElseCodeAndLabs\BergerCode\FormBergerTest1.Designer.cs">
       <DependentUpon>FormBergerTest1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ElseCodeAndLabs\BergerCode\FormBergerTest6.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ElseCodeAndLabs\BergerCode\FormBergerTest6.Designer.cs">
-      <DependentUpon>FormBergerTest6.cs</DependentUpon>
     </Compile>
     <Compile Include="ElseCodeAndLabs\DDC\FormDDCTest1.cs">
       <SubType>Form</SubType>
@@ -168,6 +163,7 @@
     <Compile Include="ElseCodeAndLabs\RekyrentCode\FormRekyrentTest4.Designer.cs">
       <DependentUpon>FormRekyrentTest4.cs</DependentUpon>
     </Compile>
+    <Compile Include="ElseCodeAndLabs\RekyrentCode\RecurrentData.cs" />
     <Compile Include="ElseCodeAndLabs\SateliteCode\FormSateliteTest1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -321,9 +317,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElseCodeAndLabs\BergerCode\FormBergerTest1.resx">
       <DependentUpon>FormBergerTest1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ElseCodeAndLabs\BergerCode\FormBergerTest6.resx">
-      <DependentUpon>FormBergerTest6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ElseCodeAndLabs\DDC\FormDDCTest1.resx">
       <DependentUpon>FormDDCTest1.cs</DependentUpon>
