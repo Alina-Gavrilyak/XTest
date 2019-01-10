@@ -139,8 +139,16 @@ namespace XTest
         {
             if (formName.Equals("Код Элайеса"))
             {
-                SystematicCode.ElaesaCode.FormElaesaTest1 form = new SystematicCode.ElaesaCode.FormElaesaTest1();
-                form.Show();
+                if (codec)
+                {
+                    SystematicCode.ElaesaCode.FormElaesaTest1 form = new SystematicCode.ElaesaCode.FormElaesaTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+                    SystematicCode.ElaesaCode.FormElaesaTest5 form = new SystematicCode.ElaesaCode.FormElaesaTest5(isTest);
+                    form.Show();
+                }
             }
             else if (formName.Equals("Код Варшамова"))
             {

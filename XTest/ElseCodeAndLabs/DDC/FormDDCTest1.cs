@@ -112,13 +112,6 @@ namespace XTest
             }
         }
 
-        private void buttonNext_Click(object sender, EventArgs e)
-        {
-            if (result.Text == "0000001011101001")
-                labelResult.Text = "Правильно!";
-            else labelResult.Text = "Не верно";
-        }
-
         private void btnCheck_Click(object sender, EventArgs e)
         {
             if (result.Text == correctAnswer)
