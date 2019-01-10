@@ -257,6 +257,7 @@
       <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="SystematicCode\ElaesaCode\ElaesaData.cs" />
     <Compile Include="SystematicCode\ElaesaCode\FormElaesaTest1.cs">
       <SubType>Form</SubType>
     </Compile>
