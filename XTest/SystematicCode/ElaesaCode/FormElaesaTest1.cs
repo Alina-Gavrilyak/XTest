@@ -15,9 +15,9 @@ namespace XTest.SystematicCode.ElaesaCode
     public partial class FormElaesaTest1 : MetroForm
     {
         private string correctAnswer;
-        private static int countPassedQuestion;
+        private static int countPassedQuestion = 0;
         private static int countCorrectAnswer;
-        private static int maxCount = 4;
+        private static int maxCount = 1;
 
         private bool _isTest;
 
@@ -32,7 +32,7 @@ namespace XTest.SystematicCode.ElaesaCode
 
             FillFormData();
             ChangeForm();
-            
+
             if (Settings.Theme == MyTheme.Black)
                 BlackTheme();
         }
@@ -65,13 +65,13 @@ namespace XTest.SystematicCode.ElaesaCode
             matrixElement8.Text = keys[7];
             matrixElement9.Text = keys[8];
             matrixElement10.Text = keys[9];
-            correctAnswer = string.Join(",", item.Value); 
-            
+            correctAnswer = string.Join(",", item.Value);
+
         }
 
         private void ChangeForm()
         {
-           
+
             if (_isTest)
             {
                 Check.Enabled = false;
@@ -94,7 +94,7 @@ namespace XTest.SystematicCode.ElaesaCode
                     ((Button)c).BackColor = Color.FromArgb(34, 34, 34);
                     ((Button)c).ForeColor = Color.White;
                 }
-                     if (c.GetType() == typeof(TextBox))
+                if (c.GetType() == typeof(TextBox))
                 {
                     ((TextBox)c).BackColor = Color.FromArgb(34, 34, 34);
                     ((TextBox)c).ForeColor = Color.White;
@@ -165,11 +165,6 @@ namespace XTest.SystematicCode.ElaesaCode
                 form.Show();
                 this.Close();
             }
-        }
-
-        private void FormElaesaTest1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void ShowAnswer_Click(object sender, EventArgs e)

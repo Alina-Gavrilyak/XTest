@@ -18,7 +18,7 @@ namespace XTest.SystematicCode.VarshamovaCode
         private string correctAnswer;
         private static int countPassedQuestion;
         private static int countCorrectAnswer;
-        private static int maxCount = 5;
+        private static int maxCount = 1;
 
         private bool _isTest;
 
@@ -109,13 +109,15 @@ namespace XTest.SystematicCode.VarshamovaCode
             textBox1.Text = values[0];
             textBox2.Text = values[1];
             textBox3.Text = values[2];
+            textBox4.Text = values[3];
         }
 
         private void Check_Click(object sender, EventArgs e)
         {
             string result = textBox1.Text
                           + "," + textBox2.Text
-                          + "," + textBox3.Text;
+                          + "," + textBox3.Text
+                          + "," + textBox4.Text;
 
             if (result == correctAnswer)
             {
@@ -142,19 +144,29 @@ namespace XTest.SystematicCode.VarshamovaCode
                     countCorrectAnswer++;
                 }
 
-                int mark = countCorrectAnswer * 5 / countPassedQuestion;
-                ResultForm form = new ResultForm(mark, Text, countCorrectAnswer, countPassedQuestion);
-                form.Show();
-                countPassedQuestion = 0;
-                countCorrectAnswer = 0;
-                this.Close();
+
+                if (maxCount > countPassedQuestion)
+                {
+                    FormVarshamovaTest1 form = new FormVarshamovaTest1(true);
+                    form.Show();
+                    this.Close();
+                }
+                else
+                {
+                    FormVarshamovaTest2 form = new FormVarshamovaTest2(true, countCorrectAnswer);
+                    form.Show();
+                    countPassedQuestion = 0;
+                    countCorrectAnswer = 0;
+                    this.Close();
+                }
             }
             else
             {
-                FormVarshamovaTest1 form = new FormVarshamovaTest1(false);
+                FormVarshamovaTest2 form = new FormVarshamovaTest2(false, countCorrectAnswer);
                 form.Show();
                 this.Close();
             }
         }
+           
     }
 }

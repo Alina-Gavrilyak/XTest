@@ -523,7 +523,6 @@
             this.Padding = new System.Windows.Forms.Padding(15, 60, 15, 16);
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.Text = "Код Эллайеса";
-            this.Load += new System.EventHandler(this.FormElaesaTest1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

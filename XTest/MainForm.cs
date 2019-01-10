@@ -152,7 +152,18 @@ namespace XTest
             }
             else if (formName.Equals("Код Варшамова"))
             {
+                if (codec)
+                {
 
+                    SystematicCode.VarshamovaCode.FormVarshamovaTest1 form = new SystematicCode.VarshamovaCode.FormVarshamovaTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+
+                    SystematicCode.VarshamovaCode.FormVarshamovaTest2 form = new SystematicCode.VarshamovaCode.FormVarshamovaTest2(isTest);
+                    form.Show();
+                }
             }
             else if (formName.Equals("Коды Рида-Милеера"))
             {
@@ -168,13 +179,13 @@ namespace XTest
             else if (formName.Equals("Коды Абрамсона"))
             {
 
-                CyclicCode.AbramsonaCode.FormAbramsTest1 form = new CyclicCode.AbramsonaCode.FormAbramsTest1(isTest,codec);
+                CyclicCode.AbramsonaCode.FormAbramsTest1 form = new CyclicCode.AbramsonaCode.FormAbramsTest1(isTest, codec);
                 form.Show();
             }
             else if (formName.Equals("Коды Файра"))
             {
-                    FormFairaTest1 form = new FormFairaTest1(isTest, codec);
-                    form.Show();
+                FormFairaTest1 form = new FormFairaTest1(isTest, codec);
+                form.Show();
             }
             else if (formName.Equals("Код Хеминга 2"))
             {
@@ -183,7 +194,7 @@ namespace XTest
             }
             else if (formName.Equals("Код БЧХ"))
             {
-                CyclicCode.BChHCode.FormBChHTest1 form = new CyclicCode.BChHCode.FormBChHTest1(isTest,codec);
+                CyclicCode.BChHCode.FormBChHTest1 form = new CyclicCode.BChHCode.FormBChHTest1(isTest, codec);
                 form.Show();
             }
 
@@ -228,7 +239,7 @@ namespace XTest
             //other codes
             else if (formName.Equals("Код Грея"))
             {
-                ElseCodeAndLabs.GrayCode.FormGrayTest1 form = new ElseCodeAndLabs.GrayCode.FormGrayTest1(isTest,codec);
+                ElseCodeAndLabs.GrayCode.FormGrayTest1 form = new ElseCodeAndLabs.GrayCode.FormGrayTest1(isTest, codec);
                 form.Show();
             }
             else if (formName.Equals("Двоично-десятичный код"))
@@ -238,7 +249,7 @@ namespace XTest
             }
             else if (formName.Equals("Код Бергера"))
             {
-                ElseCodeAndLabs.BergerCode.FormBergerTest1 form = new ElseCodeAndLabs.BergerCode.FormBergerTest1(isTest,codec);
+                ElseCodeAndLabs.BergerCode.FormBergerTest1 form = new ElseCodeAndLabs.BergerCode.FormBergerTest1(isTest, codec);
                 form.Show();
             }
             else if (formName.Equals("Код Шенона-Фано"))
