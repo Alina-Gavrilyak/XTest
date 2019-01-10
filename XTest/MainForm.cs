@@ -232,8 +232,16 @@ namespace XTest
             }
             else if (formName.Equals("Итеративный код"))
             {
-                Non_binaryCode.IterativityCode.FormIterativityTest5 form = new Non_binaryCode.IterativityCode.FormIterativityTest5();
-                form.Show();
+                if (codec)
+                {
+                    Non_binaryCode.IterativityCode.FormIterativityTest1 form = new Non_binaryCode.IterativityCode.FormIterativityTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+                    Non_binaryCode.IterativityCode.FormIterativityTest5 form = new Non_binaryCode.IterativityCode.FormIterativityTest5(isTest);
+                    form.Show();
+                }
             }
 
             //other codes

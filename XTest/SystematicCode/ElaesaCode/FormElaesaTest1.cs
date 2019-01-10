@@ -104,15 +104,15 @@ namespace XTest.SystematicCode.ElaesaCode
         private void Check_Click(object sender, EventArgs e)
         {
             string result = textBox1.Text
-                          + "," + textBox2.Text
-                          + "," + textBox3.Text
-                          + "," + textBox4.Text
-                          + "," + textBox5.Text
-                          + "," + textBox6.Text
-                          + "," + textBox7.Text
-                          + "," + textBox8.Text
-                          + "," + textBox9.Text
-                          + "," + textBox10.Text;
+                           + "," + textBox2.Text
+                           + "," + textBox3.Text
+                           + "," + textBox4.Text
+                           + "," + textBox5.Text
+                           + "," + textBox6.Text
+                           + "," + textBox7.Text
+                           + "," + textBox8.Text
+                           + "," + textBox9.Text
+                           + "," + textBox10.Text;
             if (result == correctAnswer)
             {
                 CheckingResultLabel.Text = "Правильно";
@@ -126,15 +126,15 @@ namespace XTest.SystematicCode.ElaesaCode
         private void BtnNext_Click(object sender, EventArgs e)
         {
             string result = textBox1.Text
-                          + "," + textBox2.Text
-                          + "," + textBox3.Text
-                          + "," + textBox4.Text
-                          + "," + textBox5.Text
-                          + "," + textBox6.Text
-                          + "," + textBox7.Text
-                          + "," + textBox8.Text
-                          + "," + textBox9.Text
-                          + "," + textBox10.Text;
+                           + "," + textBox2.Text
+                           + "," + textBox3.Text
+                           + "," + textBox4.Text
+                           + "," + textBox5.Text
+                           + "," + textBox6.Text
+                           + "," + textBox7.Text
+                           + "," + textBox8.Text
+                           + "," + textBox9.Text
+                           + "," + textBox10.Text;
             if (_isTest)
             {
                 countPassedQuestion++;
