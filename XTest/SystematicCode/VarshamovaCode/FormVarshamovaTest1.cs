@@ -14,11 +14,65 @@ namespace XTest.SystematicCode.VarshamovaCode
 {
     public partial class FormVarshamovaTest1 : MetroForm
     {
-        public FormVarshamovaTest1()
+
+        private string correctAnswer;
+        private static int countPassedQuestion;
+        private static int countCorrectAnswer;
+        private static int maxCount = 5;
+
+        private bool _isTest;
+
+        public FormVarshamovaTest1(bool isTest)
         {
             InitializeComponent();
+
+            _isTest = isTest;
+
+            FillFormData();
+            ChangeForm();
+
             if (Settings.Theme == MyTheme.Black)
                 BlackTheme();
+        }
+
+        private void FillFormData()
+        {
+            Random r = new Random();
+            VarshamoveData data = new VarshamoveData();
+            KeyValuePair<string[], string[]> item;
+            if (_isTest)
+            {
+                item = data.Form1CodecData.First();
+            }
+            else
+            {
+                item = data.Form1CodecData.First();
+            }
+
+            string[] keys = item.Key;
+            string[] values = item.Value;
+
+            nLabel.Text = keys[0];
+            dLabel.Text = keys[0];
+
+            //textBox1.Text = values[0];
+            //textBox2.Text = values[1];
+            //textBox3.Text = values[2];
+            //textBox4.Text = values[3];
+
+
+            correctAnswer = string.Join(",", item.Value);
+
+          
+        }
+
+        private void ChangeForm()
+        {
+            if (_isTest)
+            {
+                Check.Enabled = false;
+                ShowAnswer.Enabled = false;
+            }
         }
         private void BlackTheme()
         {
@@ -46,6 +100,61 @@ namespace XTest.SystematicCode.VarshamovaCode
         private void FormVarshamovaTest1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void ShowAnswer_Click(object sender, EventArgs e)
+        {
+            string[] values = correctAnswer.Split(',');
+
+            textBox1.Text = values[0];
+            textBox2.Text = values[1];
+            textBox3.Text = values[2];
+        }
+
+        private void Check_Click(object sender, EventArgs e)
+        {
+            string result = textBox1.Text
+                          + "," + textBox2.Text
+                          + "," + textBox3.Text;
+
+            if (result == correctAnswer)
+            {
+                CheckingResultLabel.Text = "Правильно";
+            }
+            else
+            {
+                CheckingResultLabel.Text = "Не правильно";
+            }
+        }
+
+        private void BtnNext_Click(object sender, EventArgs e)
+        {
+            if (_isTest)
+            {
+                countPassedQuestion++;
+                string result = textBox1.Text
+                               + "," + textBox2.Text
+                               + "," + textBox3.Text
+                               + "," + textBox4.Text;
+
+                if (result == correctAnswer)
+                {
+                    countCorrectAnswer++;
+                }
+
+                int mark = countCorrectAnswer * 5 / countPassedQuestion;
+                ResultForm form = new ResultForm(mark, Text, countCorrectAnswer, countPassedQuestion);
+                form.Show();
+                countPassedQuestion = 0;
+                countCorrectAnswer = 0;
+                this.Close();
+            }
+            else
+            {
+                FormVarshamovaTest1 form = new FormVarshamovaTest1(false);
+                form.Show();
+                this.Close();
+            }
         }
     }
 }

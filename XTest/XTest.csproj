@@ -300,6 +300,7 @@
       <DependentUpon>FormVarshamovaTest2.cs</DependentUpon>
     </Compile>
     <Compile Include="SystematicCode\HemingaCode\HemingaData.cs" />
+    <Compile Include="SystematicCode\VarshamovaCode\VarshamoveData.cs" />
     <Compile Include="Theory.cs">
       <SubType>Form</SubType>
     </Compile>
