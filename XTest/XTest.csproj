@@ -153,6 +153,7 @@
     <Compile Include="ElseCodeAndLabs\HaffmenaCode\FormHaffmenaTest2.Designer.cs">
       <DependentUpon>FormHaffmenaTest2.cs</DependentUpon>
     </Compile>
+    <Compile Include="ElseCodeAndLabs\HaffmenaCode\HaffmenaData.cs" />
     <Compile Include="ElseCodeAndLabs\RekyrentCode\FormRekyrentTest1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,12 +186,7 @@
     <Compile Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest1.Designer.cs">
       <DependentUpon>FormShenona-FanoTest1.cs</DependentUpon>
     </Compile>
-    <Compile Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest3.Designer.cs">
-      <DependentUpon>FormShenona-FanoTest3.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ElseCodeAndLabs\Shenona-FanoCode\ShenonaFanoData.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +292,7 @@
     <Compile Include="SystematicCode\Rida-MilleraCode\FormRida-MilleraTest2.Designer.cs">
       <DependentUpon>FormRida-MilleraTest2.cs</DependentUpon>
     </Compile>
+    <Compile Include="SystematicCode\Rida-MilleraCode\RidaMilleraData.cs" />
     <Compile Include="SystematicCode\VarshamovaCode\FormVarshamovaTest1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -372,9 +369,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest1.resx">
       <DependentUpon>FormShenona-FanoTest1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ElseCodeAndLabs\Shenona-FanoCode\FormShenona-FanoTest3.resx">
-      <DependentUpon>FormShenona-FanoTest3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
