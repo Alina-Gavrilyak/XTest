@@ -146,6 +146,7 @@
     <Compile Include="ElseCodeAndLabs\HaffmenaCode\FormHaffmenaTest2.Designer.cs">
       <DependentUpon>FormHaffmenaTest2.cs</DependentUpon>
     </Compile>
+    <Compile Include="ElseCodeAndLabs\HaffmenaCode\HaffmenaData.cs" />
     <Compile Include="ElseCodeAndLabs\RekyrentCode\FormRekyrentTest1.cs">
       <SubType>Form</SubType>
     </Compile>
