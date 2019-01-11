@@ -156,7 +156,16 @@ namespace XTest
             }
             else if (formName.Equals("Коды Рида-Милеера"))
             {
-
+                if (codec)
+                {
+                    SystematicCode.Rida_MilleraCode.FormRida_MilleraTest1 form = new SystematicCode.Rida_MilleraCode.FormRida_MilleraTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+                    SystematicCode.Rida_MilleraCode.FormRida_MilleraTest2 form = new SystematicCode.Rida_MilleraCode.FormRida_MilleraTest2(isTest);
+                    form.Show();
+                }
             }
             else if (formName.Equals("Код Хеминга 1"))
             {
@@ -243,7 +252,7 @@ namespace XTest
             }
             else if (formName.Equals("Код Шенона-Фано"))
             {
-                ElseCodeAndLabs.Shenona_FanoCode.FormShenona_FanoTest1 form = new ElseCodeAndLabs.Shenona_FanoCode.FormShenona_FanoTest1();
+                ElseCodeAndLabs.Shenona_FanoCode.FormShenona_FanoTest1 form = new ElseCodeAndLabs.Shenona_FanoCode.FormShenona_FanoTest1(isTest);
                 form.Show();
             }
             else if (formName.Equals("Код Хаффмена"))

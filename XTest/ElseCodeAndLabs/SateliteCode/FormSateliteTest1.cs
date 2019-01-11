@@ -14,7 +14,6 @@ namespace XTest.ElseCodeAndLabs.SateliteCode
 {
     public partial class FormSateliteTest1 : MetroForm
     {
-
         private string correctAnswer;
         private static int countPassedQuestion;
         private static int countCorrectAnswer;
