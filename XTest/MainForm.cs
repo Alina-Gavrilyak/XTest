@@ -256,8 +256,16 @@ namespace XTest
             }
             else if (formName.Equals("Код Хаффмена"))
             {
-                ElseCodeAndLabs.HaffmenaCode.FormHaffmenaTest1 form = new ElseCodeAndLabs.HaffmenaCode.FormHaffmenaTest1();
-                form.Show();
+                if (codec)
+                {
+                    ElseCodeAndLabs.HaffmenaCode.FormHaffmenaTest1 form = new ElseCodeAndLabs.HaffmenaCode.FormHaffmenaTest1(isTest);
+                    form.Show();
+                }
+                else
+                {
+                    ElseCodeAndLabs.HaffmenaCode.FormHaffmenaTest2 form = new ElseCodeAndLabs.HaffmenaCode.FormHaffmenaTest2(isTest);
+                    form.Show();
+                }
             }
             else if (formName.Equals("Коды-спутники"))
             {
